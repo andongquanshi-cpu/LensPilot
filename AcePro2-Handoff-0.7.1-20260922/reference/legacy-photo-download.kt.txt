@@ -1,0 +1,57 @@
+// Historical reference only; not compiled. Original capture/CaptureParamsViewModel.kt lines 498-553.
+    override fun onCaptureFinish(functionMode: FunctionMode, filePaths: List<String>) {
+        _captureUiState.update {
+            it.copy(
+                statusLabel = "拍摄完成",
+                subStatusLabel = it.subStatusLabel,
+                isPreRecording = false,
+                paramsEnable = true,
+                startEnable = true,
+                endEnable = false,
+                recordTimeLabel = "",
+                preRecordTimeLabel = "",
+                captureCountLabel = "",
+                finishUrls = filePaths,
+                throwable = null
+            )
+        }
+
+        val device = CameraSessionHolder.cameraDevice
+        if (device != null) {
+            viewModelScope.launch(Dispatchers.IO) {
+                // 尝试从回调里拿最新的一张 JPG
+                var latestJpg = filePaths.lastOrNull { it.endsWith(".jpg", ignoreCase = true) }
+
+                // 【新增双保险】：如果回调里是空的，我们主动去相机文件列表里查
+                if (latestJpg == null) {
+                    println("回调里没有文件路径，主动拉取相机文件列表...")
+                    val allFiles = device.file.listMediaFiles().getOrNull().orEmpty()
+                    latestJpg = allFiles.lastOrNull { it.endsWith(".jpg", ignoreCase = true) }
+                }
+
+                if (latestJpg != null) {
+                    val endpoint = device.file.getEndpoint()
+                    val url = endpoint + latestJpg
+
+                    println("检测到新照片，开始自动下载: $url")
+
+                    // 统一缓存目录
+                    val localDir = "/storage/emulated/0/Android/data/com.insta.vertical.demo/cache"
+                    val dirFile = File(localDir)
+                    if (!dirFile.exists()) dirFile.mkdirs()
+
+                    val localFilePath = device.file.downloadMediaFile(url, targetDir = localDir).getOrNull()
+
+                    if (localFilePath != null) {
+                        println("照片下载成功: $localFilePath")
+                        uploadPhotoToWeb(File(localFilePath))
+                    } else {
+                        println("照片下载失败")
+                    }
+                } else {
+                    // 如果主动拉取还是没有，大概率是硬件没存上
+                    println("获取照片失败！请检查相机是否插入了 SD 卡，或者 SD 卡是否已满！")
+                }
+            }
+        }
+    }

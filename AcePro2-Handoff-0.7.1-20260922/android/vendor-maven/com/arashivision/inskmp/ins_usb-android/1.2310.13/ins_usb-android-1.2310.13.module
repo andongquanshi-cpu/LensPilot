@@ -1,0 +1,296 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../ins_usb/1.2310.13/ins_usb-1.2310.13.module",
+    "group": "com.arashivision.inskmp",
+    "module": "ins_usb",
+    "version": "1.2310.13",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_usb-debug.aar",
+          "url": "ins_usb-android-1.2310.13-debug.aar",
+          "size": 270533,
+          "sha512": "fdfa1a7b59af97d96677cd82409023c1a56db5d8b2cf887dbc1f2fbd971cfa6455b5018bc8150988bfcbe2016639cfd9c6de700bb8af4072dfbaf7c6363b7ea1",
+          "sha256": "7fafb931b6b74f932edd1ebdfcbf0eec4d8fad9ead9bbc03cce5ac308d370d3a",
+          "sha1": "5c21d2421455fc6ed0cd915282f464730e06a75a",
+          "md5": "02c450a22d1b0709373717f658e873b9"
+        }
+      ]
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.7.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_usb-debug.aar",
+          "url": "ins_usb-android-1.2310.13-debug.aar",
+          "size": 270533,
+          "sha512": "fdfa1a7b59af97d96677cd82409023c1a56db5d8b2cf887dbc1f2fbd971cfa6455b5018bc8150988bfcbe2016639cfd9c6de700bb8af4072dfbaf7c6363b7ea1",
+          "sha256": "7fafb931b6b74f932edd1ebdfcbf0eec4d8fad9ead9bbc03cce5ac308d370d3a",
+          "sha1": "5c21d2421455fc6ed0cd915282f464730e06a75a",
+          "md5": "02c450a22d1b0709373717f658e873b9"
+        }
+      ]
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "ins_usb-android-debug-1.2310.13-sources.jar",
+          "url": "ins_usb-android-1.2310.13-debug-sources.jar",
+          "size": 14884,
+          "sha512": "cc1355bac9f3b2521e8eb63c0621a92ed2012fcd1ce234a1f72c60aa784451c0099541b0f6cf33637e2f213966775307f4de006d565b044d62e68c73af776a7d",
+          "sha256": "2a00661185214604c488c5158746a861bf3278d99aeed03ea8d83eb4ce5a93b8",
+          "sha1": "12b7e1b62f76fb078869d9c213f52a5e3135840c",
+          "md5": "efdff8dc3e15bfadddc821213bab5540"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_usb-release.aar",
+          "url": "ins_usb-android-1.2310.13.aar",
+          "size": 213504,
+          "sha512": "88f44072c3a7c57093d10ff269ecd58dd0eaf89c191e5578b3ff929e61e497f16aceb3708cd46100272f9f890388eb5f3b8f2b52fc702ace9db848378e0ea7fa",
+          "sha256": "b4ca6e002cd288119819f6033263533b7290be701d0dde12493268d4c7d796d6",
+          "sha1": "00086d721556ca1651ba5e9dff5f3061ecb832a7",
+          "md5": "8a097d1940d2c981edebd759cde32cab"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.7.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_usb-release.aar",
+          "url": "ins_usb-android-1.2310.13.aar",
+          "size": 213504,
+          "sha512": "88f44072c3a7c57093d10ff269ecd58dd0eaf89c191e5578b3ff929e61e497f16aceb3708cd46100272f9f890388eb5f3b8f2b52fc702ace9db848378e0ea7fa",
+          "sha256": "b4ca6e002cd288119819f6033263533b7290be701d0dde12493268d4c7d796d6",
+          "sha1": "00086d721556ca1651ba5e9dff5f3061ecb832a7",
+          "md5": "8a097d1940d2c981edebd759cde32cab"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "ins_usb-android-1.2310.13-sources.jar",
+          "url": "ins_usb-android-1.2310.13-sources.jar",
+          "size": 14884,
+          "sha512": "cc1355bac9f3b2521e8eb63c0621a92ed2012fcd1ce234a1f72c60aa784451c0099541b0f6cf33637e2f213966775307f4de006d565b044d62e68c73af776a7d",
+          "sha256": "2a00661185214604c488c5158746a861bf3278d99aeed03ea8d83eb4ce5a93b8",
+          "sha1": "12b7e1b62f76fb078869d9c213f52a5e3135840c",
+          "md5": "efdff8dc3e15bfadddc821213bab5540"
+        }
+      ]
+    }
+  ]
+}

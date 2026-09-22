@@ -1,0 +1,255 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.arashivision.inskmp",
+    "module": "minicamera",
+    "version": "1.2310.13-feature-tob-2.1.5-20260904101959",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_ble",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_socket",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_usb",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.squareup.wire",
+          "module": "wire-runtime",
+          "version": {
+            "requires": "5.4.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "minicamera-metadata-1.2310.13-feature-tob-2.1.5-20260904101959.jar",
+          "url": "minicamera-1.2310.13-feature-tob-2.1.5-20260904101959.jar",
+          "size": 1450799,
+          "sha512": "65b98ee4d18b017a28fe1c3158ef3a304ad864baa149d8ccb06898fce71fcfbf2b633e4070a7235c82f2374b3b6754d43359fcf843b089c2274cf83c6844ca96",
+          "sha256": "127171c20ad3c012cbc0421ff2bfd38594bde7106e1ff3d7ee5010f8efdc4366",
+          "sha1": "ab63a1dd84f94fea6119c1001864034878b1a40a",
+          "md5": "8fcfddb35fc5e43d47c261018ff41f73"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "minicamera-kotlin-1.2310.13-feature-tob-2.1.5-20260904101959-sources.jar",
+          "url": "minicamera-1.2310.13-feature-tob-2.1.5-20260904101959-sources.jar",
+          "size": 4802413,
+          "sha512": "d494a32450b65b719d2f805016924173ad0e945ba82ae3809c6be4231c26ca8434c5ee5f28b0c8aeec0fbeb831b9a3b0adf5ca34ab09e627534f2be8318138de",
+          "sha256": "14c0bf582c77f266670499ca5510520da1d0da76961a7048397db2ce36e88ae4",
+          "sha1": "a5290bdb8639c1f56214d3be63eb968b76756bc6",
+          "md5": "182d80f5744de1ad91950162d09424ce"
+        }
+      ]
+    },
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-android",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-android",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-android",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-android",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-android",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-android",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../minicamera-iosarm64/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-iosarm64-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-iosarm64",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../minicamera-iosarm64/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-iosarm64-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-iosarm64",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../minicamera-iosarm64/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-iosarm64-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+        "group": "com.arashivision.inskmp",
+        "module": "minicamera-iosarm64",
+        "version": "1.2310.13-feature-tob-2.1.5-20260904101959"
+      }
+    }
+  ]
+}

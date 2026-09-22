@@ -1,0 +1,107 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.arashivision.minicamera",
+    "module": "fastble",
+    "version": "1.2310.13",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "fastble-1.2310.13.aar",
+          "url": "fastble-1.2310.13.aar",
+          "size": 90905,
+          "sha512": "e11e2c111e487466f38aa6043521ef912221ae4aea27747c0c5cf0941d24324cbeee172fe227ad2f9391c86eeed31ef4c5e085738aac104058b84d5fcd87001d",
+          "sha256": "d30bcd914ea33fa78c0d39ae98a48c46b03f1847bffb106f67249758544df9d2",
+          "sha1": "19d2213882ddf8720a9801a58d755b051f7907e9",
+          "md5": "bb3b1d289cc9ae9e223c77845aa66b6b"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.insta360.infrastructure",
+          "module": "thread",
+          "version": {
+            "requires": "1.0.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fastble-1.2310.13.aar",
+          "url": "fastble-1.2310.13.aar",
+          "size": 90905,
+          "sha512": "e11e2c111e487466f38aa6043521ef912221ae4aea27747c0c5cf0941d24324cbeee172fe227ad2f9391c86eeed31ef4c5e085738aac104058b84d5fcd87001d",
+          "sha256": "d30bcd914ea33fa78c0d39ae98a48c46b03f1847bffb106f67249758544df9d2",
+          "sha1": "19d2213882ddf8720a9801a58d755b051f7907e9",
+          "md5": "bb3b1d289cc9ae9e223c77845aa66b6b"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fastble-1.2310.13-sources.jar",
+          "url": "fastble-1.2310.13-sources.jar",
+          "size": 48131,
+          "sha512": "6323cbc33769b70c3b8cd311db5a2c00c520cf2bed374e6d075a81829a11274cc83b164649d22538d1a16da554586e2376531b7d374520285aa5ed0076a246a7",
+          "sha256": "2a1673fa2e28ea2aaabac0e4ca971dc7dbfca39be4748b75cf0ef8e00aae0c67",
+          "sha1": "2c60d9e82c7f7d884ba7ce52ea10ece4582446ab",
+          "md5": "209ae088fc58fbfb0b29985e3d4d646a"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fastble-1.2310.13-javadoc.jar",
+          "url": "fastble-1.2310.13-javadoc.jar",
+          "size": 472255,
+          "sha512": "dc83e67968cad897c9e99786af8168293ab0477295e5d69252750ec04682677f0cf88d10d49a6e719ee9a519a2d03b5e9daa01c60e9234c8d7837dc445d403e3",
+          "sha256": "1360f0a4bd28ff509a776ce0b94bbb040ea368c0cd02551bcbea836bb5814ce7",
+          "sha1": "2aa8c02d532d178ee39ac7cafc50ba33e9fa3043",
+          "md5": "d0625476d40ea0f161c900d555ba76fd"
+        }
+      ]
+    }
+  ]
+}

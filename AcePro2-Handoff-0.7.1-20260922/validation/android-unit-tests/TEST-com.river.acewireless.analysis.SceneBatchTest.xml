@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.river.acewireless.analysis.SceneBatchTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-22T09:52:58.964Z" hostname="QianyuandeMacBook-Air.local" time="0.327">
+  <properties/>
+  <testcase name="rejectsRepeatedRender" classname="com.river.acewireless.analysis.SceneBatchTest" time="0.004"/>
+  <testcase name="neverReturnsPartialBatch" classname="com.river.acewireless.analysis.SceneBatchTest" time="0.104"/>
+  <testcase name="collectsOrderedCompleteBatch" classname="com.river.acewireless.analysis.SceneBatchTest" time="0.215"/>
+  <testcase name="rejectsPreTriggerSampling" classname="com.river.acewireless.analysis.SceneBatchTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

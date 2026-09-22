@@ -1,0 +1,75 @@
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:parseDebugLocalResources
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugResources
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugJniLibFolders
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugNativeLibs
+> Task :app:mergeLibDexDebug
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libc++_shared.so, libcamerastream.so, libinsbase2.so, libinssocket.so, libinsusb.so, libnativeplayer.so, libusb-1.0.so. Run with --info option to learn more.
+
+> Task :app:processDebugResources
+> Task :app:mergeExtDexDebug
+
+> Task :app:compileDebugKotlin
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:42:42 'val allNetworks: Array<(out) Network!>' is deprecated. Deprecated in Java.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:54:26 'val allNetworks: Array<(out) Network!>' is deprecated. Deprecated in Java.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:88:48 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'functionMode'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:89:47 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'functionMode'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:90:48 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'functionMode'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:91:46 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'functionMode'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:91:66 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'filePaths'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:92:45 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'functionMode'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:92:65 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'throwable'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:93:51 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'functionMode'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:93:71 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'captureTime'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:94:52 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'functionMode'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:94:72 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'captureCount'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:95:56 The corresponding parameter in the supertype 'CaptureStatusListener' is named 'functionMode'. This may cause problems when calling this function with named arguments.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/CameraSession.kt:227:40 'val allNetworks: Array<(out) Network!>' is deprecated. Deprecated in Java.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/MainActivity.kt:38:45 'val systemWindowInsetTop: Int' is deprecated. Deprecated in Java.
+w: file://USER_HOME/Desktop/%E5%BD%B1%E7%9F%B3/%E8%BF%81%E7%A7%BB%E5%8C%85/AcePro2-Handoff-0.7.1-20260922/android/app/src/main/java/com/river/acewireless/MainActivity.kt:38:81 'val systemWindowInsetBottom: Int' is deprecated. Deprecated in Java.
+
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:processDebugJavaRes
+> Task :app:dexBuilderDebug
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:testDebugUnitTest
+
+BUILD SUCCESSFUL in 13s
+40 actionable tasks: 40 executed

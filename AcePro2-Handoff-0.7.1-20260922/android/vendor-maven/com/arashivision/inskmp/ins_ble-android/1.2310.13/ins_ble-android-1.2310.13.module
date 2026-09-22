@@ -1,0 +1,338 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../ins_ble/1.2310.13/ins_ble-1.2310.13.module",
+    "group": "com.arashivision.inskmp",
+    "module": "ins_ble",
+    "version": "1.2310.13",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_ble-debug.aar",
+          "url": "ins_ble-android-1.2310.13-debug.aar",
+          "size": 90478,
+          "sha512": "0cb58835c733077e3d4732ee13e0b9c0f3ee06a02fa3fb0e44ba14adec0c444acca203d0a27256a6baafd9ec61a3de34ee48b18574318c496691e5ca773f2124",
+          "sha256": "fd9a0a3a785976ceb82bbe00fe125856f9d3d4f65e07282961fd3e1b6c76b344",
+          "sha1": "f794d557fdad3bc2296f302eaa77fef03db90f29",
+          "md5": "eadbf88c992f4c28b3078616a37020c9"
+        }
+      ]
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.7.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.minicamera",
+          "module": "fastble",
+          "version": {
+            "requires": "1.2310.13"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_ble-debug.aar",
+          "url": "ins_ble-android-1.2310.13-debug.aar",
+          "size": 90478,
+          "sha512": "0cb58835c733077e3d4732ee13e0b9c0f3ee06a02fa3fb0e44ba14adec0c444acca203d0a27256a6baafd9ec61a3de34ee48b18574318c496691e5ca773f2124",
+          "sha256": "fd9a0a3a785976ceb82bbe00fe125856f9d3d4f65e07282961fd3e1b6c76b344",
+          "sha1": "f794d557fdad3bc2296f302eaa77fef03db90f29",
+          "md5": "eadbf88c992f4c28b3078616a37020c9"
+        }
+      ]
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "ins_ble-android-debug-1.2310.13-sources.jar",
+          "url": "ins_ble-android-1.2310.13-debug-sources.jar",
+          "size": 34884,
+          "sha512": "c58d50eb7f160b776620eb984e1bd3a44ec728180898fc24384195182dc54bc56e93fe6ea3bce528c30464e043f396b78c8f1e08ce5280acf646c9dd1b23a7f9",
+          "sha256": "fee9e922a1bb08f36276cf4bc33ba5ffccb9f3ff5a3c242f67c4709a0cf286c9",
+          "sha1": "7a6247e5aa22b8e7d64bb615c447bd487150ee59",
+          "md5": "afea0a1e58519173d350d7860008a302"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_ble-release.aar",
+          "url": "ins_ble-android-1.2310.13.aar",
+          "size": 86669,
+          "sha512": "6f4f0b92ad71bb13a246b7f7eebb4717b4c6f1433b8476e35834fff0fcf301961b7d0d752abab931a321b1c122ad242aa17d1c64451df02266f0c7bf41b32b7d",
+          "sha256": "47c57f12c1fd9ef78b8e31f0ef5f2f6ba55c3d96bf5b116120aaa96662e376ce",
+          "sha1": "96ce4c91ccd335095673384c0d4f9a20582ef18f",
+          "md5": "8f84e2220cc8bbc87743782fd2fe29f9"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.7.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.minicamera",
+          "module": "fastble",
+          "version": {
+            "requires": "1.2310.13"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_ble-release.aar",
+          "url": "ins_ble-android-1.2310.13.aar",
+          "size": 86669,
+          "sha512": "6f4f0b92ad71bb13a246b7f7eebb4717b4c6f1433b8476e35834fff0fcf301961b7d0d752abab931a321b1c122ad242aa17d1c64451df02266f0c7bf41b32b7d",
+          "sha256": "47c57f12c1fd9ef78b8e31f0ef5f2f6ba55c3d96bf5b116120aaa96662e376ce",
+          "sha1": "96ce4c91ccd335095673384c0d4f9a20582ef18f",
+          "md5": "8f84e2220cc8bbc87743782fd2fe29f9"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "ins_ble-android-1.2310.13-sources.jar",
+          "url": "ins_ble-android-1.2310.13-sources.jar",
+          "size": 34884,
+          "sha512": "c58d50eb7f160b776620eb984e1bd3a44ec728180898fc24384195182dc54bc56e93fe6ea3bce528c30464e043f396b78c8f1e08ce5280acf646c9dd1b23a7f9",
+          "sha256": "fee9e922a1bb08f36276cf4bc33ba5ffccb9f3ff5a3c242f67c4709a0cf286c9",
+          "sha1": "7a6247e5aa22b8e7d64bb615c447bd487150ee59",
+          "md5": "afea0a1e58519173d350d7860008a302"
+        }
+      ]
+    }
+  ]
+}

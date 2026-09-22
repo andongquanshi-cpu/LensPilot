@@ -1,0 +1,116 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.arashivision",
+    "module": "camerastream",
+    "version": "1.2220.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "camerastream-1.2220.1.aar",
+          "url": "camerastream-1.2220.1.aar",
+          "size": 526045,
+          "sha512": "8ff0ffc17efc54b35a2ad4cb9d60a65b21def2b7893a4365499b67c69344ad41adcd2bc52df68e5a2e9fe8fbe04247540bdd582902856ccf61d56792910f4dc0",
+          "sha256": "0e09c97cde6ec791a6ff1820f984aa1f0d300acd20cf9613cfd10060f961fac3",
+          "sha1": "d5c4df899e8fe39b4164eec95ad1a198adc64cf6",
+          "md5": "5397a62c6d669ce5acef3c9df81e8005"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "camerastream-1.2220.1.aar",
+          "url": "camerastream-1.2220.1.aar",
+          "size": 526045,
+          "sha512": "8ff0ffc17efc54b35a2ad4cb9d60a65b21def2b7893a4365499b67c69344ad41adcd2bc52df68e5a2e9fe8fbe04247540bdd582902856ccf61d56792910f4dc0",
+          "sha256": "0e09c97cde6ec791a6ff1820f984aa1f0d300acd20cf9613cfd10060f961fac3",
+          "sha1": "d5c4df899e8fe39b4164eec95ad1a198adc64cf6",
+          "md5": "5397a62c6d669ce5acef3c9df81e8005"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "camerastream-1.2220.1-sources.jar",
+          "url": "camerastream-1.2220.1-sources.jar",
+          "size": 39972,
+          "sha512": "eb3eb3490988dfa8dd6c29940db5733870979eea61fdeb73c29299f76c62d56034546cd72f671017795a4531183f0de04a084979e802a4453c79c949d327f2f3",
+          "sha256": "356be5f16b910b4945fb1c12d8621ed1885082ff2e57341c820336d16bf7d211",
+          "sha1": "800f35072b8a3ebe03b04b08b8aa8dce3a95457d",
+          "md5": "64c562ff35a6553950a6587210db31b6"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "camerastream-1.2220.1-javadoc.jar",
+          "url": "camerastream-1.2220.1-javadoc.jar",
+          "size": 451493,
+          "sha512": "30b317308a50b544ae51c79e61582881ffcaceafa7c1547ba9821da7eb4b2144531f222cf68724bba81945f6d6115586ed5a801e526ec44cabe0d2310ab2b33e",
+          "sha256": "f3f54488efbb72ac6537807394616980859f9af706d1b04498ee795c7c1fa13d",
+          "sha1": "fc126542e384618b39cae89ce623783b9a223e74",
+          "md5": "ce125d80fa8f95510fb09a5f66fe7417"
+        }
+      ]
+    }
+  ]
+}

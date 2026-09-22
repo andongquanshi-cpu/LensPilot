@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.river.acewireless.stream.VideoFrameTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-22T09:52:59.296Z" hostname="QianyuandeMacBook-Air.local" time="0.005">
+  <properties/>
+  <testcase name="codecConfigSurvivesAcrossFramesAndHevcIsDetected" classname="com.river.acewireless.stream.VideoFrameTest" time="0.001"/>
+  <testcase name="lengthPrefixedAndAnnexBHaveSameNalPayloads" classname="com.river.acewireless.stream.VideoFrameTest" time="0.001"/>
+  <testcase name="fragmentedFramesEmitOnlyAfterTimestampBoundary" classname="com.river.acewireless.stream.VideoFrameTest" time="0.001"/>
+  <testcase name="timestampRollbackDiscardsIncompleteFrame" classname="com.river.acewireless.stream.VideoFrameTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,13 @@
+.env
+.venv/
+node_modules/
+frontend/dist/
+data/
+__pycache__/
+.pytest_cache/
+*.pyc
+/artifacts/
+*.tsbuildinfo
+**/received_batches/
+**/.gradle/
+**/local.properties

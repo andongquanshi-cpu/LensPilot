@@ -1,0 +1,142 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../sdk-bridge/2.2.0/sdk-bridge-2.2.0.module",
+    "group": "com.arashivision.sdk",
+    "module": "sdk-bridge",
+    "version": "2.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.arashivision.sdk",
+          "module": "sdk-common",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.3.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "verticalBridge-release.aar",
+          "url": "sdk-bridge-android-2.2.0.aar",
+          "size": 23086,
+          "sha512": "52a425a2d1331942ea8a90225c286cb7518120f00b7015810ca3ae077ad0806068cbadda988fcd45cfe20f1e4df42926b7b351421256091971c9e386c3b810c4",
+          "sha256": "72ffa4068079295a866954e1c84713038669295ffbf56660b7a725982fc4b51e",
+          "sha1": "353b91079453c04d5e8bfb9c1ea1d5605c8bc908",
+          "md5": "7c67f20800eba804596621dfbc4efe9e"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.arashivision.sdk",
+          "module": "sdk-common",
+          "version": {
+            "requires": "2.2.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.3.20"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "verticalBridge-release.aar",
+          "url": "sdk-bridge-android-2.2.0.aar",
+          "size": 23086,
+          "sha512": "52a425a2d1331942ea8a90225c286cb7518120f00b7015810ca3ae077ad0806068cbadda988fcd45cfe20f1e4df42926b7b351421256091971c9e386c3b810c4",
+          "sha256": "72ffa4068079295a866954e1c84713038669295ffbf56660b7a725982fc4b51e",
+          "sha1": "353b91079453c04d5e8bfb9c1ea1d5605c8bc908",
+          "md5": "7c67f20800eba804596621dfbc4efe9e"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "verticalBridge-android-2.2.0-sources.jar",
+          "url": "sdk-bridge-android-2.2.0-sources.jar",
+          "size": 8106,
+          "sha512": "bf5715da1b70ab5921e733851d3957a47c204cf754474ff556c6e5c6a2edfea1ef112543bfd04f39962119ca72a0f0f7fd68370b31326ec3f09ae7a731532676",
+          "sha256": "6ba3336c9dc605bfd702793fc4febc815c7afb9b2e19004d8a4f965e01c71558",
+          "sha1": "550d3315bf45d931814178029f71780a8a64d486",
+          "md5": "ff1634c5ef58fbd5e2f921c1d33a908c"
+        }
+      ]
+    }
+  ]
+}

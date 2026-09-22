@@ -1,0 +1,220 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.arashivision.inskmp",
+    "module": "ins_usb",
+    "version": "1.2310.13",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_usb-metadata-1.2310.13.jar",
+          "url": "ins_usb-1.2310.13.jar",
+          "size": 7669,
+          "sha512": "6fd196dce281180ed39c4ecdb8967f35522bd9408c0effea8d04bfd78d750340c768c206bd302c5fc68430e1100045894ee9347a0ced0d414463ad9d052c2b35",
+          "sha256": "0e87cf7fbeebe9b88b30a08820d107bd08a326b834a7b4bab77d36a71de12845",
+          "sha1": "480a566b7a3a7e6052a26c4505b8b47fec76f061",
+          "md5": "8df34cbed65dc78abb5b16b78346cadd"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "ins_usb-kotlin-1.2310.13-sources.jar",
+          "url": "ins_usb-1.2310.13-sources.jar",
+          "size": 5585,
+          "sha512": "f7b64ec8177e17873edd0382e6645561d757d413e00121e863cefeabc401fb02f22bda52139686a82fa1cad2b9c9be4d02141afb04fb828ee193fb33666da938",
+          "sha256": "d35a4aae6db2c44f57ca797269be5b6d8ce1796a6d1e85eab107fc173a6dc1ff",
+          "sha1": "edf5541570d87e823f4642dd72a553dd66783c2f",
+          "md5": "a9510c41d9726633d4dc2aadaef4a2be"
+        }
+      ]
+    },
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../ins_usb-iosarm64/1.2310.13/ins_usb-iosarm64-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-iosarm64",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../ins_usb-iosarm64/1.2310.13/ins_usb-iosarm64-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-iosarm64",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../ins_usb-iosarm64/1.2310.13/ins_usb-iosarm64-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_usb-iosarm64",
+        "version": "1.2310.13"
+      }
+    }
+  ]
+}

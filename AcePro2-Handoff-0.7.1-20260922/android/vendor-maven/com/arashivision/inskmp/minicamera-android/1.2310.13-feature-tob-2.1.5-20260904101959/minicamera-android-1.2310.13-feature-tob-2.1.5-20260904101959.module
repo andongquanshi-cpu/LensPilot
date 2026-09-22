@@ -1,0 +1,618 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../minicamera/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+    "group": "com.arashivision.inskmp",
+    "module": "minicamera",
+    "version": "1.2310.13-feature-tob-2.1.5-20260904101959",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_ble",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_socket",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_usb",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.squareup.wire",
+          "module": "wire-runtime",
+          "version": {
+            "requires": "5.4.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "minicamera-debug.aar",
+          "url": "minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959-debug.aar",
+          "size": 10682391,
+          "sha512": "68a81acda5a9b56bd6f7fa9a6b7f8147aa9a7e9acc9fdf9a4bda121138b36ce2b4a94e46a4b86454b09c237485dca33f02974f724ec7c53e67cf2408868a87e3",
+          "sha256": "bba1b1392d04dbe4d0172b9889ba5af15a9b886c0720eaff3dfe9c846e627ff2",
+          "sha1": "ff11c9b6f0e245d0a972152c68f71a02e5d6ca6c",
+          "md5": "0d80b9eadb5793441e5ef71d6402663b"
+        }
+      ]
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.8.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_ble",
+          "version": {
+            "requires": "1.2310.13"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_socket",
+          "version": {
+            "requires": "1.2310.13"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_usb",
+          "version": {
+            "requires": "1.2310.13"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.squareup.wire",
+          "module": "wire-runtime",
+          "version": {
+            "requires": "5.4.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.8.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "minicamera-debug.aar",
+          "url": "minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959-debug.aar",
+          "size": 10682391,
+          "sha512": "68a81acda5a9b56bd6f7fa9a6b7f8147aa9a7e9acc9fdf9a4bda121138b36ce2b4a94e46a4b86454b09c237485dca33f02974f724ec7c53e67cf2408868a87e3",
+          "sha256": "bba1b1392d04dbe4d0172b9889ba5af15a9b886c0720eaff3dfe9c846e627ff2",
+          "sha1": "ff11c9b6f0e245d0a972152c68f71a02e5d6ca6c",
+          "md5": "0d80b9eadb5793441e5ef71d6402663b"
+        }
+      ]
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "minicamera-android-debug-1.2310.13-feature-tob-2.1.5-20260904101959-sources.jar",
+          "url": "minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959-debug-sources.jar",
+          "size": 4811774,
+          "sha512": "d42a375158c7b8a6c94493217d3f41352219665249c0d52a24dcab8d815bf83a7e196156d4770cf987c6a98f056695217f385e45bc0bbb89382a5ca93070c9cb",
+          "sha256": "8fb1ffa32b4601836cfcb813dd7e8f6605604f2d9b5f0e9a7f80f1de2710e99e",
+          "sha1": "92788c4366e0db9beac1f3ac836d4aa4c274b9d6",
+          "md5": "52ecf88427fad239ce50fc8481cd4a24"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_ble",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_socket",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_usb",
+          "version": {
+            "requires": "1.2310.13"
+          }
+        },
+        {
+          "group": "com.squareup.wire",
+          "module": "wire-runtime",
+          "version": {
+            "requires": "5.4.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "minicamera-release.aar",
+          "url": "minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.aar",
+          "size": 10265276,
+          "sha512": "35f996d3dd74738e931a60d817d28f53954a7e98f35bccf41010c3a7f1b2d346eb290027dfcbde07bfb568c3aa38876631406a3e552644d6fd87cb10c72c2eb4",
+          "sha256": "c91ab38649a1aa6654b7d6711c2e931a8f24718228c3fb3553397ca4ef6a99b5",
+          "sha1": "dddac83b177b4bfb45dabb1bccd700fa91ce211d",
+          "md5": "f5333eb84a1b1c53a0ab661d32628757"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.8.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_ble",
+          "version": {
+            "requires": "1.2310.13"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_socket",
+          "version": {
+            "requires": "1.2310.13"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "ins_usb",
+          "version": {
+            "requires": "1.2310.13"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.squareup.wire",
+          "module": "wire-runtime",
+          "version": {
+            "requires": "5.4.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.8.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "minicamera-release.aar",
+          "url": "minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.aar",
+          "size": 10265276,
+          "sha512": "35f996d3dd74738e931a60d817d28f53954a7e98f35bccf41010c3a7f1b2d346eb290027dfcbde07bfb568c3aa38876631406a3e552644d6fd87cb10c72c2eb4",
+          "sha256": "c91ab38649a1aa6654b7d6711c2e931a8f24718228c3fb3553397ca4ef6a99b5",
+          "sha1": "dddac83b177b4bfb45dabb1bccd700fa91ce211d",
+          "md5": "f5333eb84a1b1c53a0ab661d32628757"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959-sources.jar",
+          "url": "minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959-sources.jar",
+          "size": 4811774,
+          "sha512": "d42a375158c7b8a6c94493217d3f41352219665249c0d52a24dcab8d815bf83a7e196156d4770cf987c6a98f056695217f385e45bc0bbb89382a5ca93070c9cb",
+          "sha256": "8fb1ffa32b4601836cfcb813dd7e8f6605604f2d9b5f0e9a7f80f1de2710e99e",
+          "sha1": "92788c4366e0db9beac1f3ac836d4aa4c274b9d6",
+          "md5": "52ecf88427fad239ce50fc8481cd4a24"
+        }
+      ]
+    }
+  ]
+}

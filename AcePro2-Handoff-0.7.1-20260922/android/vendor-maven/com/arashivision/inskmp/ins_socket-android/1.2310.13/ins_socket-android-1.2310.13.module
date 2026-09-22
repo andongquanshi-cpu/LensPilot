@@ -1,0 +1,338 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../ins_socket/1.2310.13/ins_socket-1.2310.13.module",
+    "group": "com.arashivision.inskmp",
+    "module": "ins_socket",
+    "version": "1.2310.13",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_socket-debug.aar",
+          "url": "ins_socket-android-1.2310.13-debug.aar",
+          "size": 281371,
+          "sha512": "3109672a667902eaef2c745614d84625de7d3adb825835b9b13629851842cade1917f9c9511bc8f306eb419336776fa9c1c3c8abd6a30356cc0721a80a96be85",
+          "sha256": "00e4c4aca5afb7ee4c8c85787725cb8aebc5d6bd38c5d0fbb3df916b6af2ce01",
+          "sha1": "217eec2e16c2fbb6a0649734fd01a9a800627698",
+          "md5": "23fa075e65eeae816ca12b47e7b4853c"
+        }
+      ]
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.7.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_socket-debug.aar",
+          "url": "ins_socket-android-1.2310.13-debug.aar",
+          "size": 281371,
+          "sha512": "3109672a667902eaef2c745614d84625de7d3adb825835b9b13629851842cade1917f9c9511bc8f306eb419336776fa9c1c3c8abd6a30356cc0721a80a96be85",
+          "sha256": "00e4c4aca5afb7ee4c8c85787725cb8aebc5d6bd38c5d0fbb3df916b6af2ce01",
+          "sha1": "217eec2e16c2fbb6a0649734fd01a9a800627698",
+          "md5": "23fa075e65eeae816ca12b47e7b4853c"
+        }
+      ]
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "ins_socket-android-debug-1.2310.13-sources.jar",
+          "url": "ins_socket-android-1.2310.13-debug-sources.jar",
+          "size": 9668,
+          "sha512": "92ac089303caa7be3fb1fc7c9c072dfc84438501d4d9e03b7c80c59b6cf50d6a59715fad4c4af0dc9f684f6673f5deb0dc9147bca82bbf015d18fecf3a51ba52",
+          "sha256": "0167b1a5163e8204ca4529f7b13bb36f0d180a5092ea7cbc6496c2d39e1773e9",
+          "sha1": "53aab9321b06bc45118d84943e1a82049bc5e4a7",
+          "md5": "081b67d82b91567ed899a1815c70e518"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_socket-release.aar",
+          "url": "ins_socket-android-1.2310.13.aar",
+          "size": 202579,
+          "sha512": "ce26551d82296a7c690a26e300a83280984d432f1eb295f9fa4587f4bb73a2eb19c554bf9e2beb6fd41ff508435c72174e7c36389a0b8d96b04105cf712f10d6",
+          "sha256": "f0fab18ad5f008cdba0447e741c563c2dbf37853318d0fd993b46dc38fa6e3c4",
+          "sha1": "db7f33c73bfc679561a2390609bbde41d54c45e2",
+          "md5": "b64f7bdfd566f8308ee78d1150a099cf"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.7.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_socket-release.aar",
+          "url": "ins_socket-android-1.2310.13.aar",
+          "size": 202579,
+          "sha512": "ce26551d82296a7c690a26e300a83280984d432f1eb295f9fa4587f4bb73a2eb19c554bf9e2beb6fd41ff508435c72174e7c36389a0b8d96b04105cf712f10d6",
+          "sha256": "f0fab18ad5f008cdba0447e741c563c2dbf37853318d0fd993b46dc38fa6e3c4",
+          "sha1": "db7f33c73bfc679561a2390609bbde41d54c45e2",
+          "md5": "b64f7bdfd566f8308ee78d1150a099cf"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "ins_socket-android-1.2310.13-sources.jar",
+          "url": "ins_socket-android-1.2310.13-sources.jar",
+          "size": 9668,
+          "sha512": "92ac089303caa7be3fb1fc7c9c072dfc84438501d4d9e03b7c80c59b6cf50d6a59715fad4c4af0dc9f684f6673f5deb0dc9147bca82bbf015d18fecf3a51ba52",
+          "sha256": "0167b1a5163e8204ca4529f7b13bb36f0d180a5092ea7cbc6496c2d39e1773e9",
+          "sha1": "53aab9321b06bc45118d84943e1a82049bc5e4a7",
+          "md5": "081b67d82b91567ed899a1815c70e518"
+        }
+      ]
+    }
+  ]
+}

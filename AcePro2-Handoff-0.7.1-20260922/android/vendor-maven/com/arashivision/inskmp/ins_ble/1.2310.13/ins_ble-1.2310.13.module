@@ -1,0 +1,220 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.arashivision.inskmp",
+    "module": "ins_ble",
+    "version": "1.2310.13",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ins_ble-metadata-1.2310.13.jar",
+          "url": "ins_ble-1.2310.13.jar",
+          "size": 24260,
+          "sha512": "dc0c7da8d0992a4c3861d61ad7bd0cbdfa3aa23e4b69504af365ae3ebd30ad50eaf4a9f73ff1164d55ab27fcf0cc6c94d5ec58cd656a139dd382f8e62608d537",
+          "sha256": "9ddd685b397372228611b1dc278a7f08cbb9361e1ef50173f2100216d774f44e",
+          "sha1": "92f2a4e8db98871d0ef3456677c5b1010e31fd4a",
+          "md5": "4b120f99d77eac4b1fb3f5871d273d50"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "ins_ble-kotlin-1.2310.13-sources.jar",
+          "url": "ins_ble-1.2310.13-sources.jar",
+          "size": 19831,
+          "sha512": "69dd3ed7c0e1354be39bb1c58d5bd6a2863b9a31ad0dd9563dc35066144fdb151403c61cf981c2adfc2c5ec04dc9237faa0009b995657063dca90c731a131167",
+          "sha256": "1c7f970fb936540801a4910c3e255f428ae99c7484e91b6924465fd009cc8aba",
+          "sha1": "1994476d2d7c8889cc4be4aa1e71408795fe1eb5",
+          "md5": "fa7a46e9944d0b07b62e9e75b07d5a12"
+        }
+      ]
+    },
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-android",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../ins_ble-iosarm64/1.2310.13/ins_ble-iosarm64-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-iosarm64",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../ins_ble-iosarm64/1.2310.13/ins_ble-iosarm64-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-iosarm64",
+        "version": "1.2310.13"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../ins_ble-iosarm64/1.2310.13/ins_ble-iosarm64-1.2310.13.module",
+        "group": "com.arashivision.inskmp",
+        "module": "ins_ble-iosarm64",
+        "version": "1.2310.13"
+      }
+    }
+  ]
+}

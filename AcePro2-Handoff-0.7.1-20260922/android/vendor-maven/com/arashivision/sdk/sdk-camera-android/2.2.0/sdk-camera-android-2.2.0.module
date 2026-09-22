@@ -1,0 +1,254 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../sdk-camera/2.2.0/sdk-camera-2.2.0.module",
+    "group": "com.arashivision.sdk",
+    "module": "sdk-camera",
+    "version": "2.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.arashivision",
+          "module": "camerastream",
+          "version": {
+            "requires": "1.2220.1"
+          }
+        },
+        {
+          "group": "com.arashivision.sdk",
+          "module": "onestream",
+          "version": {
+            "requires": "2.0.20"
+          }
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "minicamera",
+          "version": {
+            "requires": "1.2310.13-feature-tob-2.1.5-20260904101959"
+          }
+        },
+        {
+          "group": "com.arashivision.sdk",
+          "module": "sdk-common",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "com.arashivision.sdk",
+          "module": "sdk-bridge",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.3.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "verticalCamera-release.aar",
+          "url": "sdk-camera-android-2.2.0.aar",
+          "size": 2586736,
+          "sha512": "475098cf9b5c74ed32c2e6068ea567b82dd8b7786cf739b847ae7402b71f34680bc22069b330e7ad1590985c3a5f5424469271291b99e0422eed9d0aa328e644",
+          "sha256": "fd09af4f07a1c0d0f1af44d7af7619bc582da391d43bddfa76138dd62ca892b2",
+          "sha1": "ee28d69682a520ba1d892db902d8b3f2065df17c",
+          "md5": "af039a19b373564709745506813045d0"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.arashivision",
+          "module": "camerastream",
+          "version": {
+            "requires": "1.2220.1"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.sdk",
+          "module": "onestream",
+          "version": {
+            "requires": "2.0.20"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.inskmp",
+          "module": "minicamera",
+          "version": {
+            "requires": "1.2310.13-feature-tob-2.1.5-20260904101959"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.sdk",
+          "module": "sdk-common",
+          "version": {
+            "requires": "2.2.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "com.arashivision.sdk",
+          "module": "sdk-bridge",
+          "version": {
+            "requires": "2.2.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.3.20"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "verticalCamera-release.aar",
+          "url": "sdk-camera-android-2.2.0.aar",
+          "size": 2586736,
+          "sha512": "475098cf9b5c74ed32c2e6068ea567b82dd8b7786cf739b847ae7402b71f34680bc22069b330e7ad1590985c3a5f5424469271291b99e0422eed9d0aa328e644",
+          "sha256": "fd09af4f07a1c0d0f1af44d7af7619bc582da391d43bddfa76138dd62ca892b2",
+          "sha1": "ee28d69682a520ba1d892db902d8b3f2065df17c",
+          "md5": "af039a19b373564709745506813045d0"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "verticalCamera-android-2.2.0-sources.jar",
+          "url": "sdk-camera-android-2.2.0-sources.jar",
+          "size": 278545,
+          "sha512": "a6212c01cd2b70d05717639b8e0d2a3897347180d0e24284a3de3acb06bb90dbf6fa066f52b744e81d2fc641791820cdd35783c88ec86b3d3af563fe1eeb629a",
+          "sha256": "151ce2b67771eae3b7934fbdbe6c16cf4577bd74436c1ed304fe2f716a495c29",
+          "sha1": "f470f29bd8dc4afe649cc610e1e285642e59e8ae",
+          "md5": "70bd0ca89f2b0f3e40b779aa7df68da0"
+        }
+      ]
+    }
+  ]
+}

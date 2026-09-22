@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.river.acewireless.analysis.SceneAnalysisTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-22T09:52:58.815Z" hostname="QianyuandeMacBook-Air.local" time="0.147">
+  <properties/>
+  <testcase name="stoppingCancelsInFlightAnalysisWithoutPublishingResult" classname="com.river.acewireless.analysis.SceneAnalysisTest" time="0.139"/>
+  <testcase name="slowAnalysisKeepsOnlyNewestPendingFrame" classname="com.river.acewireless.analysis.SceneAnalysisTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

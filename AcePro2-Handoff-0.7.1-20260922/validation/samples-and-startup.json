@@ -1,0 +1,33 @@
+{
+  "batches": [
+    {
+      "batch": "batch-8q0gj79g",
+      "frames": 10,
+      "jpegDecode": "passed"
+    },
+    {
+      "batch": "batch-o_afo198",
+      "frames": 10,
+      "jpegDecode": "passed"
+    },
+    {
+      "batch": "batch-qwsy3r67",
+      "frames": 10,
+      "jpegDecode": "passed"
+    },
+    {
+      "batch": "batch-x6p6nrta",
+      "frames": 10,
+      "jpegDecode": "passed"
+    },
+    {
+      "batch": "batch-xn_lq9jw",
+      "frames": 10,
+      "jpegDecode": "passed"
+    }
+  ],
+  "receiverHealth": {
+    "service": "ace-batch-receiver"
+  },
+  "note": "Local startup test; not a new phone or second-computer integration test."
+}

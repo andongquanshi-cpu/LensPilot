@@ -1,0 +1,230 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.arashivision.sdk",
+    "module": "sdk-common",
+    "version": "2.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.6.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-datetime",
+          "version": {
+            "requires": "0.6.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "atomicfu",
+          "version": {
+            "requires": "0.23.2"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.6.0"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-core",
+          "version": {
+            "requires": "2.3.11"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-content-negotiation",
+          "version": {
+            "requires": "2.3.11"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-serialization-kotlinx-json",
+          "version": {
+            "requires": "2.3.11"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-logging",
+          "version": {
+            "requires": "2.3.11"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.3.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "verticalCommon-metadata-2.2.0.jar",
+          "url": "sdk-common-2.2.0.jar",
+          "size": 21372,
+          "sha512": "eedae212343b34e71c65f6a52a6cf484f2dbf31e9d8d303b5848ad7972a0501cfa6a0c255953ecdfe156fd9d2671f0a3c5c0ede7f1e3e5d9473eba49daae05ce",
+          "sha256": "e47e25570758e640f464585961336f5f915a46dcda59f309e60d6c6bcde67bdd",
+          "sha1": "5a4f4d751f483ac894dc61798cadc568c48cb5c1",
+          "md5": "fb1376d964984fd3b19de97a9cfc5436"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "verticalCommon-kotlin-2.2.0-sources.jar",
+          "url": "sdk-common-2.2.0-sources.jar",
+          "size": 27968,
+          "sha512": "bb9a7837d34e4305fb51ec569abf6e0ca696c773c343abbf1f53a4523e32676eebfe14522baceda19e52994e1b3cf797a0be19e8f70ea6e9dd0ee773c2d70d1f",
+          "sha256": "eb3b8aeed4561d71c9dc928e4575ae99ad8d5fd94a65a5ba3f683db348bde321",
+          "sha1": "b5b99f2b35825c4bb29c2bfe22c6b48489e6a2b8",
+          "md5": "638ad3558cca05d3fdd605a4003ca3f2"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../sdk-common-android/2.2.0/sdk-common-android-2.2.0.module",
+        "group": "com.arashivision.sdk",
+        "module": "sdk-common-android",
+        "version": "2.2.0"
+      }
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../sdk-common-android/2.2.0/sdk-common-android-2.2.0.module",
+        "group": "com.arashivision.sdk",
+        "module": "sdk-common-android",
+        "version": "2.2.0"
+      }
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../sdk-common-android/2.2.0/sdk-common-android-2.2.0.module",
+        "group": "com.arashivision.sdk",
+        "module": "sdk-common-android",
+        "version": "2.2.0"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sdk-common-iosarm64/2.2.0/sdk-common-iosarm64-2.2.0.module",
+        "group": "com.arashivision.sdk",
+        "module": "sdk-common-iosarm64",
+        "version": "2.2.0"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sdk-common-iosarm64/2.2.0/sdk-common-iosarm64-2.2.0.module",
+        "group": "com.arashivision.sdk",
+        "module": "sdk-common-iosarm64",
+        "version": "2.2.0"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sdk-common-iosarm64/2.2.0/sdk-common-iosarm64-2.2.0.module",
+        "group": "com.arashivision.sdk",
+        "module": "sdk-common-iosarm64",
+        "version": "2.2.0"
+      }
+    }
+  ]
+}

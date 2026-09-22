@@ -1,0 +1,16 @@
+{
+  "slots": {"CPL": 0, "CLOSE_UP": 1, "BLACK_MIST": 2, "STAR": 3},
+  "supports_clear": false,
+  "sample_seconds": 2,
+  "image_size": 1280,
+  "jpeg_quality": 80,
+  "model_timeout": 12,
+  "consistent_count": 3,
+  "min_hold_seconds": 8,
+  "cooldown_seconds": 8,
+  "settling_seconds": 2,
+  "demo_distance_verified": false,
+  "allow_auto_recording_unknown": false,
+  "media_files": {},
+  "camera_indices": [0]
+}

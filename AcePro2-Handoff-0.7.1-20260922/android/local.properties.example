@@ -1,0 +1,7 @@
+# Android Studio normally generates local.properties for the local Android SDK.
+# Copy this file to local.properties only if building from a terminal.
+# macOS example (replace YOUR_NAME):
+# sdk.dir=/Users/YOUR_NAME/Library/Android/sdk
+# Windows example (use forward slashes):
+# sdk.dir=C:/Users/YOUR_NAME/AppData/Local/Android/Sdk
+# No Insta360 Maven credentials are required for the bundled SDK versions.

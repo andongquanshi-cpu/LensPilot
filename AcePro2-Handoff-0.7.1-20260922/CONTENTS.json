@@ -1,0 +1,1046 @@
+{
+  "version": "0.7.1",
+  "date": "2026-09-22",
+  "files": [
+    {
+      "path": "HANDOFF.md",
+      "bytes": 4157,
+      "sha256": "3033313a10e9e01221ddac4f00869121e779376a8a6c0b98e6bad962bc226043"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 4229,
+      "sha256": "1525eeacf0fea083608235c49565522ab8acac6f1dd97dc3bce5d1858c01889e"
+    },
+    {
+      "path": "android/.gitignore",
+      "bytes": 109,
+      "sha256": "051505d1433de56fc3ec1b39e225d23a4a9dff6664efef3377a24f2d5264e2d7"
+    },
+    {
+      "path": "android/FORWARDING.md",
+      "bytes": 3136,
+      "sha256": "b47f8f99a65ad32a270cfea0f8201f937234eafc13eea9753bc3815954d2a56e"
+    },
+    {
+      "path": "android/PROJECT_REVIEW.md",
+      "bytes": 10836,
+      "sha256": "24292481615847ea89befe88c6a33d5d90c253d28b0dc34c69df80edcd5bd5af"
+    },
+    {
+      "path": "android/README.md",
+      "bytes": 4281,
+      "sha256": "a25af14497271c810708ce28b4fb077f0f99454d6fddfe0792eca2b18d304d77"
+    },
+    {
+      "path": "android/SCENE_ANALYSIS.md",
+      "bytes": 4610,
+      "sha256": "89e9a395901ce7b6313db3495729c1fb707cecae175d35a0248c991c8a46490c"
+    },
+    {
+      "path": "android/TRIGGER_BATCH.md",
+      "bytes": 8157,
+      "sha256": "e3a46d0c36cf144fe678165b40830d2b48132a7b4bb3587744a2331bdfe93440"
+    },
+    {
+      "path": "android/app/build.gradle.kts",
+      "bytes": 756,
+      "sha256": "26fb01a021142824580101c5c7fcb8ab4ca4615117e7977657af7b3c252ed327"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "bytes": 1269,
+      "sha256": "7ebdf0c1cd3e618eea2e438f6465328803d62f7bdbf3de45d4ecf33195047d72"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/AceApplication.kt",
+      "bytes": 337,
+      "sha256": "340c06640a98ab4727e7313700519a4d012a996bacc0b4b0681223fc428fe4a7"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/AspectPreview.kt",
+      "bytes": 1545,
+      "sha256": "f4971480dc6b82c70ac697f2ade770073b6064a00c021cced9adca2710f368b9"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/CameraSession.kt",
+      "bytes": 15326,
+      "sha256": "d6a728502059aaf813582136bed78ffa3a157f840cdfa533030affbea3377ce7"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/MainActivity.kt",
+      "bytes": 9854,
+      "sha256": "e6222d2165147449cb17e0133acf342c91f3cd0b947980ff34aa488cb62bbb27"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/analysis/LanBatchSink.kt",
+      "bytes": 6062,
+      "sha256": "3bc9e57cbcbaf0f0728381c193a2b46623cfb6926efbf62a37670eacfa7e5166"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/analysis/SceneAnalysis.kt",
+      "bytes": 2379,
+      "sha256": "55622648fb73dbcfae29176f8840527ace3aff081f7eb721d1ab2c71b179e932"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/analysis/SceneBatch.kt",
+      "bytes": 2059,
+      "sha256": "db2fb9a418b114d2397f908a909125a3873cfe9e18c30f983a9d1eda7111f81a"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/analysis/SceneSampler.kt",
+      "bytes": 4155,
+      "sha256": "3b0366b4711aa702ed10e63e02e4d9868b41ce9d324810864ae3e339bd7fdfa4"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/stream/VideoDecoder.kt",
+      "bytes": 5129,
+      "sha256": "03de89a5a21e0dcebafafae80f115a7decaa9c0e471d2777a17775609aef9cde"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/stream/VideoForwarder.kt",
+      "bytes": 2648,
+      "sha256": "e87d82494530501d00a371abeea5b0b0f4421da6fceebf4ad9d56e52082279cf"
+    },
+    {
+      "path": "android/app/src/main/java/com/river/acewireless/stream/VideoFrame.kt",
+      "bytes": 3904,
+      "sha256": "bd7de3bbcbe7375ec4d4925053d9544374cab8f286025338077b332dd1323cd5"
+    },
+    {
+      "path": "android/app/src/test/java/com/river/acewireless/analysis/SceneAnalysisTest.kt",
+      "bytes": 1863,
+      "sha256": "59b42f7bbcd2a7e213192cddbf60af82e646e1ea4966a8b5d5ba32e0bee41c71"
+    },
+    {
+      "path": "android/app/src/test/java/com/river/acewireless/analysis/SceneBatchTest.kt",
+      "bytes": 1429,
+      "sha256": "a147b819d73c44ed3975b2884cb4fcb8907549e6a044792ac77812f5aeb5420e"
+    },
+    {
+      "path": "android/app/src/test/java/com/river/acewireless/analysis/SubnetTest.kt",
+      "bytes": 564,
+      "sha256": "bcf5fc5cb09e3b57cbdbfff8e29bfbbe4cf5be09a2c715d776c73f2ad806a572"
+    },
+    {
+      "path": "android/app/src/test/java/com/river/acewireless/stream/VideoFrameTest.kt",
+      "bytes": 2046,
+      "sha256": "2c8fcaf556cd68e4014d50563c35c037ca0a366dac607c3be3ba8f18aa44dfff"
+    },
+    {
+      "path": "android/build.gradle.kts",
+      "bytes": 143,
+      "sha256": "f4a20604b8c89e600a5fa7e01c63eddc83e6e06b8bfec91d0e6fd1edbc292ee4"
+    },
+    {
+      "path": "android/desktop/chunk_upload.py",
+      "bytes": 2714,
+      "sha256": "80d37dda92b28a59466db086574633f891b18b900f42260b264cd89afa38c7c0"
+    },
+    {
+      "path": "android/desktop/receiver.py",
+      "bytes": 7525,
+      "sha256": "767bfeb24417463e5adf99983652ca64c3744f6a493bf3f967b3dc5f088e39f0"
+    },
+    {
+      "path": "android/desktop/test_chunks.py",
+      "bytes": 4977,
+      "sha256": "f0d8a649446250052b05727d572d4e8d5648c1c0ee0d959e9daec4b579d19b4e"
+    },
+    {
+      "path": "android/desktop/test_receiver.py",
+      "bytes": 3242,
+      "sha256": "0cc9638b14b0758187fc1ccb74eabaf3bd6533b073133ef184777ca3699a8375"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 59203,
+      "sha256": "e996d452d2645e70c01c11143ca2d3742734a28da2bf61f25c82bdc288c9e637"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 237,
+      "sha256": "ad1ea8aa9a705cb4d999b6d779450f85af1cd1b35b0165151a498c80f0b9c853"
+    },
+    {
+      "path": "android/gradle.properties",
+      "bytes": 103,
+      "sha256": "fa078c27c9e4bde28a029d673875b028884505efa436b68cf60e1ac0be5b679b"
+    },
+    {
+      "path": "android/gradlew",
+      "bytes": 5766,
+      "sha256": "63135287117a1e6d12c84580f1f49c61d1ba02218ecd28660605e97f976e7d65"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "bytes": 2763,
+      "sha256": "af835f98787e9269af5a046edcb821a592fed372139df7b947b471a63cfc236b"
+    },
+    {
+      "path": "android/local.properties.example",
+      "bytes": 406,
+      "sha256": "50fee2cfa0e495c9c43966fd97ee98c54392e2a9705b5352d6c13924de69ebec"
+    },
+    {
+      "path": "android/settings.gradle.kts",
+      "bytes": 913,
+      "sha256": "a455c27ff17014ecf0826e4bbf9221fbdaf891b087aeed514be3de3c407e0dc8"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/camerastream/1.2220.1/camerastream-1.2220.1-javadoc.jar",
+      "bytes": 451493,
+      "sha256": "f3f54488efbb72ac6537807394616980859f9af706d1b04498ee795c7c1fa13d"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/camerastream/1.2220.1/camerastream-1.2220.1-sources.jar",
+      "bytes": 39972,
+      "sha256": "356be5f16b910b4945fb1c12d8621ed1885082ff2e57341c820336d16bf7d211"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/camerastream/1.2220.1/camerastream-1.2220.1.aar",
+      "bytes": 526045,
+      "sha256": "0e09c97cde6ec791a6ff1820f984aa1f0d300acd20cf9613cfd10060f961fac3"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/camerastream/1.2220.1/camerastream-1.2220.1.jar",
+      "bytes": 451493,
+      "sha256": "f3f54488efbb72ac6537807394616980859f9af706d1b04498ee795c7c1fa13d"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/camerastream/1.2220.1/camerastream-1.2220.1.module",
+      "bytes": 3936,
+      "sha256": "22fdde0c345d6225888a291d5c57ae2939834f0e5f66997aea30416e00ad2ace"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/camerastream/1.2220.1/camerastream-1.2220.1.pom",
+      "bytes": 1252,
+      "sha256": "de7c59a80ce8bde0bf3ce81dca57d0bba5867c0e4f2c2a5901c5434f7dae1ebf"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble/1.2310.13/ins_ble-1.2310.13-sources.jar",
+      "bytes": 19831,
+      "sha256": "1c7f970fb936540801a4910c3e255f428ae99c7484e91b6924465fd009cc8aba"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble/1.2310.13/ins_ble-1.2310.13.jar",
+      "bytes": 24260,
+      "sha256": "9ddd685b397372228611b1dc278a7f08cbb9361e1ef50173f2100216d774f44e"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble/1.2310.13/ins_ble-1.2310.13.module",
+      "bytes": 7694,
+      "sha256": "6387dafb4732a36e4a063e0549ca6a250dc5f5220ae3ed0c6f431924f0cbbb7b"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble/1.2310.13/ins_ble-1.2310.13.pom",
+      "bytes": 987,
+      "sha256": "5b69030794a06667d5004a9eada00558aa2506318d45443488404cb659529f79"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble-android/1.2310.13/ins_ble-android-1.2310.13-debug-sources.jar",
+      "bytes": 34884,
+      "sha256": "fee9e922a1bb08f36276cf4bc33ba5ffccb9f3ff5a3c242f67c4709a0cf286c9"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble-android/1.2310.13/ins_ble-android-1.2310.13-debug.aar",
+      "bytes": 90478,
+      "sha256": "fd9a0a3a785976ceb82bbe00fe125856f9d3d4f65e07282961fd3e1b6c76b344"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble-android/1.2310.13/ins_ble-android-1.2310.13-sources.jar",
+      "bytes": 34884,
+      "sha256": "fee9e922a1bb08f36276cf4bc33ba5ffccb9f3ff5a3c242f67c4709a0cf286c9"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.aar",
+      "bytes": 86669,
+      "sha256": "47c57f12c1fd9ef78b8e31f0ef5f2f6ba55c3d96bf5b116120aaa96662e376ce"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.module",
+      "bytes": 10831,
+      "sha256": "0a84a00f29fe9d71f3c2dc109f28567b75f91eae124a13b46e146930fe6e57d5"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble-android/1.2310.13/ins_ble-android-1.2310.13.pom",
+      "bytes": 3042,
+      "sha256": "850c54617d98236c9f8222b2aafd666da6908b00d36df95d413f665bfbb1de8e"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble-android/1.2310.13/ins_ble-android-debug-1.2310.13-sources.jar",
+      "bytes": 34884,
+      "sha256": "fee9e922a1bb08f36276cf4bc33ba5ffccb9f3ff5a3c242f67c4709a0cf286c9"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_ble-android/1.2310.13/ins_ble-debug.aar",
+      "bytes": 90478,
+      "sha256": "fd9a0a3a785976ceb82bbe00fe125856f9d3d4f65e07282961fd3e1b6c76b344"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket/1.2310.13/ins_socket-1.2310.13-sources.jar",
+      "bytes": 5566,
+      "sha256": "38b45dd924dcdeddb343c0bc9480f6d61a1a4ae5dfcea9c845d6b76a3f69272b"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket/1.2310.13/ins_socket-1.2310.13.jar",
+      "bytes": 7119,
+      "sha256": "83ef1e724a56aa85cfda36df257de3caa73ffb41b02936dbef61b806e61bb962"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket/1.2310.13/ins_socket-1.2310.13.module",
+      "bytes": 7788,
+      "sha256": "e7783ca5450df221c102b791f225b965be843fa5816168e6a1d20cfbc2de22ce"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket/1.2310.13/ins_socket-1.2310.13.pom",
+      "bytes": 990,
+      "sha256": "a8a305538f786c1cb3544462e5f805c21177cbfba8b55f2a4dc75760d037f3a7"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket-android/1.2310.13/ins_socket-android-1.2310.13-debug-sources.jar",
+      "bytes": 9668,
+      "sha256": "0167b1a5163e8204ca4529f7b13bb36f0d180a5092ea7cbc6496c2d39e1773e9"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket-android/1.2310.13/ins_socket-android-1.2310.13-debug.aar",
+      "bytes": 281371,
+      "sha256": "00e4c4aca5afb7ee4c8c85787725cb8aebc5d6bd38c5d0fbb3df916b6af2ce01"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket-android/1.2310.13/ins_socket-android-1.2310.13-sources.jar",
+      "bytes": 9668,
+      "sha256": "0167b1a5163e8204ca4529f7b13bb36f0d180a5092ea7cbc6496c2d39e1773e9"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket-android/1.2310.13/ins_socket-android-1.2310.13.aar",
+      "bytes": 202579,
+      "sha256": "f0fab18ad5f008cdba0447e741c563c2dbf37853318d0fd993b46dc38fa6e3c4"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket-android/1.2310.13/ins_socket-android-1.2310.13.module",
+      "bytes": 10890,
+      "sha256": "2028090c06e1a3141310bf8fddf9b7176937c8639569f8dbd4393bc40e9199e1"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket-android/1.2310.13/ins_socket-android-1.2310.13.pom",
+      "bytes": 3055,
+      "sha256": "ba5cb32664190af42d11f0a2bdb39cd69ca2842a3758415f582b53059bdfec47"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket-android/1.2310.13/ins_socket-android-debug-1.2310.13-sources.jar",
+      "bytes": 9668,
+      "sha256": "0167b1a5163e8204ca4529f7b13bb36f0d180a5092ea7cbc6496c2d39e1773e9"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_socket-android/1.2310.13/ins_socket-debug.aar",
+      "bytes": 281371,
+      "sha256": "00e4c4aca5afb7ee4c8c85787725cb8aebc5d6bd38c5d0fbb3df916b6af2ce01"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb/1.2310.13/ins_usb-1.2310.13-sources.jar",
+      "bytes": 5585,
+      "sha256": "d35a4aae6db2c44f57ca797269be5b6d8ce1796a6d1e85eab107fc173a6dc1ff"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb/1.2310.13/ins_usb-1.2310.13.jar",
+      "bytes": 7669,
+      "sha256": "0e87cf7fbeebe9b88b30a08820d107bd08a326b834a7b4bab77d36a71de12845"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb/1.2310.13/ins_usb-1.2310.13.module",
+      "bytes": 7692,
+      "sha256": "ed247db949de56e12505c593a776f071031a1798b4e8c20002e5c4b189859d2d"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb/1.2310.13/ins_usb-1.2310.13.pom",
+      "bytes": 987,
+      "sha256": "1eafe49f938e910e03733bbbe0f69b11bcabd819ddf97554ba0915daf10d9503"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb-android/1.2310.13/ins_usb-android-1.2310.13-debug-sources.jar",
+      "bytes": 14884,
+      "sha256": "2a00661185214604c488c5158746a861bf3278d99aeed03ea8d83eb4ce5a93b8"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb-android/1.2310.13/ins_usb-android-1.2310.13-debug.aar",
+      "bytes": 270533,
+      "sha256": "7fafb931b6b74f932edd1ebdfcbf0eec4d8fad9ead9bbc03cce5ac308d370d3a"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb-android/1.2310.13/ins_usb-android-1.2310.13-sources.jar",
+      "bytes": 14884,
+      "sha256": "2a00661185214604c488c5158746a861bf3278d99aeed03ea8d83eb4ce5a93b8"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.aar",
+      "bytes": 213504,
+      "sha256": "b4ca6e002cd288119819f6033263533b7290be701d0dde12493268d4c7d796d6"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.module",
+      "bytes": 9663,
+      "sha256": "02ddd869d6948231ea6d7973a9747fea162f7d3d857eea2c7441ab875427cbba"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb-android/1.2310.13/ins_usb-android-1.2310.13.pom",
+      "bytes": 2363,
+      "sha256": "41c792670bb88298c6f136cef4a3a0ea7a274ec8ebc6a34f2b6dbee5f9c442c1"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb-android/1.2310.13/ins_usb-android-debug-1.2310.13-sources.jar",
+      "bytes": 14884,
+      "sha256": "2a00661185214604c488c5158746a861bf3278d99aeed03ea8d83eb4ce5a93b8"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/ins_usb-android/1.2310.13/ins_usb-debug.aar",
+      "bytes": 270533,
+      "sha256": "7fafb931b6b74f932edd1ebdfcbf0eec4d8fad9ead9bbc03cce5ac308d370d3a"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-1.2310.13-feature-tob-2.1.5-20260904101959-sources.jar",
+      "bytes": 4802413,
+      "sha256": "14c0bf582c77f266670499ca5510520da1d0da76961a7048397db2ce36e88ae4"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-1.2310.13-feature-tob-2.1.5-20260904101959.jar",
+      "bytes": 1450799,
+      "sha256": "127171c20ad3c012cbc0421ff2bfd38594bde7106e1ff3d7ee5010f8efdc4366"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+      "bytes": 9680,
+      "sha256": "0da910d0b2d94a5dc609e475aca8d2439117a9e01493cdacb8ee092875a95f9a"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-1.2310.13-feature-tob-2.1.5-20260904101959.pom",
+      "bytes": 1943,
+      "sha256": "8d91186f00b5aaebcbe390f862c464c7ccbf6a62fdea941b361a5aabfe7f5585"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959-debug-sources.jar",
+      "bytes": 4811774,
+      "sha256": "8fb1ffa32b4601836cfcb813dd7e8f6605604f2d9b5f0e9a7f80f1de2710e99e"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959-debug.aar",
+      "bytes": 10682391,
+      "sha256": "bba1b1392d04dbe4d0172b9889ba5af15a9b886c0720eaff3dfe9c846e627ff2"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959-sources.jar",
+      "bytes": 4811774,
+      "sha256": "8fb1ffa32b4601836cfcb813dd7e8f6605604f2d9b5f0e9a7f80f1de2710e99e"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.aar",
+      "bytes": 10265276,
+      "sha256": "c91ab38649a1aa6654b7d6711c2e931a8f24718228c3fb3553397ca4ef6a99b5"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.module",
+      "bytes": 18757,
+      "sha256": "7d338ef20371a1015972e5329e8c816f56dd6056eeb27a64567767e226df397e"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-1.2310.13-feature-tob-2.1.5-20260904101959.pom",
+      "bytes": 4060,
+      "sha256": "aeb96c2a4d7115426c5f3088bfe92dbe0ebd86dfa471aafe1b6b9b97ddebc862"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-android-debug-1.2310.13-feature-tob-2.1.5-20260904101959-sources.jar",
+      "bytes": 4811774,
+      "sha256": "8fb1ffa32b4601836cfcb813dd7e8f6605604f2d9b5f0e9a7f80f1de2710e99e"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/inskmp/minicamera-android/1.2310.13-feature-tob-2.1.5-20260904101959/minicamera-debug.aar",
+      "bytes": 10682391,
+      "sha256": "bba1b1392d04dbe4d0172b9889ba5af15a9b886c0720eaff3dfe9c846e627ff2"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/minicamera/fastble/1.2310.13/fastble-1.2310.13-javadoc.jar",
+      "bytes": 472255,
+      "sha256": "1360f0a4bd28ff509a776ce0b94bbb040ea368c0cd02551bcbea836bb5814ce7"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/minicamera/fastble/1.2310.13/fastble-1.2310.13-sources.jar",
+      "bytes": 48131,
+      "sha256": "2a1673fa2e28ea2aaabac0e4ca971dc7dbfca39be4748b75cf0ef8e00aae0c67"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/minicamera/fastble/1.2310.13/fastble-1.2310.13.aar",
+      "bytes": 90905,
+      "sha256": "d30bcd914ea33fa78c0d39ae98a48c46b03f1847bffb106f67249758544df9d2"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/minicamera/fastble/1.2310.13/fastble-1.2310.13.jar",
+      "bytes": 472255,
+      "sha256": "1360f0a4bd28ff509a776ce0b94bbb040ea368c0cd02551bcbea836bb5814ce7"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/minicamera/fastble/1.2310.13/fastble-1.2310.13.module",
+      "bytes": 3707,
+      "sha256": "c3f5042824bb5080eb99f6568409468a622c368deb726557d30607a279372ac2"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/minicamera/fastble/1.2310.13/fastble-1.2310.13.pom",
+      "bytes": 1629,
+      "sha256": "add9239b6bdda7c419c6f6731d99b0533bd29fce918546edcd46fafb5e07a4e3"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/graphicpath/2.901.4/graphicpath-2.901.4.aar",
+      "bytes": 274747,
+      "sha256": "e6bdf2ca9f44120f43da66ef2777d2b0e2ba04f71987350a69666f0a4b8f13fc"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/graphicpath/2.901.4/graphicpath-2.901.4.pom",
+      "bytes": 593,
+      "sha256": "380e42512ce2858bf4b4e7d5df2aec18a203fb756b4f2d111d019dfda3bf7fe9"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/onestream/2.0.20/onestream-2.0.20.aar",
+      "bytes": 511167,
+      "sha256": "25a1316c737ee4c92b4b194fe389ce553822ad8321d6ca3b60686ef1bb486aa4"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/onestream/2.0.20/onestream-2.0.20.pom",
+      "bytes": 433,
+      "sha256": "cc3bbad824f7e9e1f7373662f2bdd972fa9d8c3e081550344dd10e305050efb2"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge/2.2.0/sdk-bridge-2.2.0-sources.jar",
+      "bytes": 8106,
+      "sha256": "6ba3336c9dc605bfd702793fc4febc815c7afb9b2e19004d8a4f965e01c71558"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge/2.2.0/sdk-bridge-2.2.0.jar",
+      "bytes": 11524,
+      "sha256": "71bc52f16d61f168c89826ee4e2a4c35242880640327eb6221d3727a8801e9a3"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge/2.2.0/sdk-bridge-2.2.0.module",
+      "bytes": 5837,
+      "sha256": "08cdcc27a051d92a5b18e2b4668011c6c74ef4ebb528d3e32a4172d07d5152d0"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge/2.2.0/sdk-bridge-2.2.0.pom",
+      "bytes": 1166,
+      "sha256": "79818721f62aca8e783078abfabbcfcc56b7dda302127b19ac3cb387c4099e97"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge-android/2.2.0/sdk-bridge-android-2.2.0-sources.jar",
+      "bytes": 8106,
+      "sha256": "6ba3336c9dc605bfd702793fc4febc815c7afb9b2e19004d8a4f965e01c71558"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge-android/2.2.0/sdk-bridge-android-2.2.0.aar",
+      "bytes": 23086,
+      "sha256": "72ffa4068079295a866954e1c84713038669295ffbf56660b7a725982fc4b51e"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge-android/2.2.0/sdk-bridge-android-2.2.0.module",
+      "bytes": 4499,
+      "sha256": "cd097711218686c6842a7f95378a7c0fa0073f51fc4836a245d9b22fe695ec43"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge-android/2.2.0/sdk-bridge-android-2.2.0.pom",
+      "bytes": 1207,
+      "sha256": "2dc3dfec6cf9f544faaecb1aa0f71783bdacf294ef4810304c0767b58a9d7146"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge-android/2.2.0/verticalBridge-android-2.2.0-sources.jar",
+      "bytes": 8106,
+      "sha256": "6ba3336c9dc605bfd702793fc4febc815c7afb9b2e19004d8a4f965e01c71558"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-bridge-android/2.2.0/verticalBridge-release.aar",
+      "bytes": 23086,
+      "sha256": "72ffa4068079295a866954e1c84713038669295ffbf56660b7a725982fc4b51e"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera/2.2.0/sdk-camera-2.2.0-sources.jar",
+      "bytes": 272559,
+      "sha256": "3390458f7d013354334c497add04fce0dccfcfe82bb62ef3d8bdc34bede8bf52"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera/2.2.0/sdk-camera-2.2.0.jar",
+      "bytes": 212753,
+      "sha256": "a7a7970b9442a0c2e3d7e3887a4a3b9213dcd1306a5f0d80a6fe576481f9e2fd"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera/2.2.0/sdk-camera-2.2.0.module",
+      "bytes": 6210,
+      "sha256": "3c2e394e98f1bb4a4785c33030a077cc9638f5179d5c616a6d74f2c7ca73d0dc"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera/2.2.0/sdk-camera-2.2.0.pom",
+      "bytes": 1572,
+      "sha256": "4063f669298c20e4bd6d020d5d077a4068438d4b9c91fb99ac82220140417fd0"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera-android/2.2.0/sdk-camera-android-2.2.0-sources.jar",
+      "bytes": 278545,
+      "sha256": "151ce2b67771eae3b7934fbdbe6c16cf4577bd74436c1ed304fe2f716a495c29"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera-android/2.2.0/sdk-camera-android-2.2.0.aar",
+      "bytes": 2586736,
+      "sha256": "fd09af4f07a1c0d0f1af44d7af7619bc582da391d43bddfa76138dd62ca892b2"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera-android/2.2.0/sdk-camera-android-2.2.0.module",
+      "bytes": 7559,
+      "sha256": "dec6a76d9f99260480812c449e568e9d7316bf7cf8e30cf5daa2a605cd8cc0ca"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera-android/2.2.0/sdk-camera-android-2.2.0.pom",
+      "bytes": 1996,
+      "sha256": "3df8b730d77af6d46edbdf775548d3cb3a9deede15ef83f9cb7bef5c40cb721c"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera-android/2.2.0/verticalCamera-android-2.2.0-sources.jar",
+      "bytes": 278545,
+      "sha256": "151ce2b67771eae3b7934fbdbe6c16cf4577bd74436c1ed304fe2f716a495c29"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-camera-android/2.2.0/verticalCamera-release.aar",
+      "bytes": 2586736,
+      "sha256": "fd09af4f07a1c0d0f1af44d7af7619bc582da391d43bddfa76138dd62ca892b2"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common/2.2.0/sdk-common-2.2.0-sources.jar",
+      "bytes": 27968,
+      "sha256": "eb3b8aeed4561d71c9dc928e4575ae99ad8d5fd94a65a5ba3f683db348bde321"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common/2.2.0/sdk-common-2.2.0.jar",
+      "bytes": 21372,
+      "sha256": "e47e25570758e640f464585961336f5f915a46dcda59f309e60d6c6bcde67bdd"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common/2.2.0/sdk-common-2.2.0.module",
+      "bytes": 7196,
+      "sha256": "6fe9f809b8e1c4ef83fd0ea4d3afdd091cd73679f48d302ad0c7f181c71aed05"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common/2.2.0/sdk-common-2.2.0.pom",
+      "bytes": 2668,
+      "sha256": "6a25cf897cc4dafa646d525107d6e5587c517a07f57452d3a626ece289dcab6a"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common-android/2.2.0/sdk-common-android-2.2.0-sources.jar",
+      "bytes": 35357,
+      "sha256": "14d8d79e4a4c39db2c5000e9417d4aaa553795f029f62b266832ee9866fdd078"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common-android/2.2.0/sdk-common-android-2.2.0.aar",
+      "bytes": 210159,
+      "sha256": "e30c35d3ace9173c877595de34da67f533f8fe17900d5aab6ee30bd3e8740807"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common-android/2.2.0/sdk-common-android-2.2.0.module",
+      "bytes": 12749,
+      "sha256": "ec5044aedc18741e661847f10f422d74ab5f2b268c4f83e187ff3bb0242c604b"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common-android/2.2.0/sdk-common-android-2.2.0.pom",
+      "bytes": 3289,
+      "sha256": "5e3e786bff220d980fc0cce2669b2a03a2597f0ae15a1be1a60c4c20355b1811"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common-android/2.2.0/verticalCommon-android-2.2.0-sources.jar",
+      "bytes": 35357,
+      "sha256": "14d8d79e4a4c39db2c5000e9417d4aaa553795f029f62b266832ee9866fdd078"
+    },
+    {
+      "path": "android/vendor-maven/com/arashivision/sdk/sdk-common-android/2.2.0/verticalCommon-release.aar",
+      "bytes": 210159,
+      "sha256": "e30c35d3ace9173c877595de34da67f533f8fe17900d5aab6ee30bd3e8740807"
+    },
+    {
+      "path": "android/vendor-maven/com/insta360/infrastructure/thread/1.0.5/thread-1.0.5.aar",
+      "bytes": 32504,
+      "sha256": "1f0d61af172665cdadea6d146b9d51e0e4b833673e56bacdc043184e1d1cc0e4"
+    },
+    {
+      "path": "android/vendor-maven/com/insta360/infrastructure/thread/1.0.5/thread-1.0.5.pom",
+      "bytes": 2224,
+      "sha256": "dea248dda94e3c7f60d5795bcdd23f3428819401d541b68d42c7ae446f66e344"
+    },
+    {
+      "path": "artifacts/AceWireless-0.7.1.apk",
+      "bytes": 33094919,
+      "sha256": "e1dae1223f206a9e8c53948fffc695498e260c16291fc13c2d68ff2caa7a1043"
+    },
+    {
+      "path": "reference/legacy-download-queue.kt.txt",
+      "bytes": 1726,
+      "sha256": "9f44e76829f55eb9eabf50d500505cea6b4e0814dae91b1f880106d6095c16d0"
+    },
+    {
+      "path": "reference/legacy-photo-download.kt.txt",
+      "bytes": 2604,
+      "sha256": "1e79277b9ecf8f74cf64e812194b6331f5aacc164aa55ffae88e47bcc35facf8"
+    },
+    {
+      "path": "reference/long-press-events.log",
+      "bytes": 169,
+      "sha256": "659fe01833bd94e0ec76fe4fd4e40abd3ea36a3f132eb27fb65c02df517e2713"
+    },
+    {
+      "path": "reference/short-press-events.log",
+      "bytes": 170,
+      "sha256": "f92b1261cfd9a8f02d3be05ac5a603d35a2709b5d510b544a8359e23128ca4fb"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-01.jpg",
+      "bytes": 120317,
+      "sha256": "de2279e7e57f585788bb40fa4509c843965cf1eee0f0cb47c13fed086c355bae"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-02.jpg",
+      "bytes": 102508,
+      "sha256": "bd0962f98ab74c723c10013e4a8789224f70d61037016a0279570ec71ca10ebe"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-03.jpg",
+      "bytes": 131793,
+      "sha256": "550f70a4c2778d0c20ca5e716543a7fcb575ee920312097dd3ddacfa15e313c5"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-04.jpg",
+      "bytes": 141190,
+      "sha256": "20a93836135706f601020609c3fd6454640007ffc2e6d8e5713bb11caa109457"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-05.jpg",
+      "bytes": 127750,
+      "sha256": "ec47225fc202e08bad21c51e06f35a3b7fc5da8f1242d9ede55a6b36a392f0a0"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-06.jpg",
+      "bytes": 134801,
+      "sha256": "624431704a3d84bca5e1fcb1d40654b56e86664249329fc68dc94c5f8ebc5d65"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-07.jpg",
+      "bytes": 136274,
+      "sha256": "e7588e0e21e37013de0cba27987d2dc6982a97007353c1bd589e3d8f3c4ab120"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-08.jpg",
+      "bytes": 151302,
+      "sha256": "1163f70f32a9d634cc0b2918147c6014c4c41da16aeb9dd8e9c78ce10280ce12"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-09.jpg",
+      "bytes": 134631,
+      "sha256": "b53adc8278fb007850c349ddc8f80f949e57020358b0814a24c3ce7cc3c2ff1c"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/frame-10.jpg",
+      "bytes": 130788,
+      "sha256": "fc78c74c40a44d2b5fb068d6de518b69203f3af145176113ab9be5c67d691d7c"
+    },
+    {
+      "path": "sample-data/batch-8q0gj79g/manifest.json",
+      "bytes": 1264,
+      "sha256": "17495393672ec1245c26bd023e7acaf48915b73fb220b3a6c0b219a9e35e2b18"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-01.jpg",
+      "bytes": 140284,
+      "sha256": "08ecf7e43db6673da461eb0802fc0b18610c19c6da8bb251d48edc1627708a79"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-02.jpg",
+      "bytes": 135803,
+      "sha256": "ed16cd0823948db9a01bd8bbd8119f1d6802d1ef82bc6145c99fb67b38d18639"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-03.jpg",
+      "bytes": 133159,
+      "sha256": "1906142e4eb74b57cfa3c03109c07c5c9ddc16110b33b57b2c1e3c2b7c1680a5"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-04.jpg",
+      "bytes": 117563,
+      "sha256": "4182a3a6b8643c8a9d024508846f5fe51c159457703ce35d2971a5c20964ced9"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-05.jpg",
+      "bytes": 116141,
+      "sha256": "1b88d9f034acf02d2e4771f6ce0c63e9bb6f769174f3e61bb4bd3397d4059ed5"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-06.jpg",
+      "bytes": 111788,
+      "sha256": "a560f8476b43e3bfd30bc08e88cb46115cfcdcb2302bd38d107fd4469e3ffada"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-07.jpg",
+      "bytes": 113198,
+      "sha256": "064088a5290f7906d38c3db35f525a8faeaa867c89d29ef490c9bc8f6ffb0b8e"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-08.jpg",
+      "bytes": 122069,
+      "sha256": "7d4bf5083ca84a0542a53c1756e285ffa5748162dc82bb8bd181347160239d14"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-09.jpg",
+      "bytes": 133203,
+      "sha256": "9b13904de1a01ca932151c66b241e766d642103707a4658b76150f1a5cb59fbe"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/frame-10.jpg",
+      "bytes": 132145,
+      "sha256": "46d6512c96859da136baa04b0440e71c31f99b04e7b51e70c2ec454e38df3cb4"
+    },
+    {
+      "path": "sample-data/batch-o_afo198/manifest.json",
+      "bytes": 1266,
+      "sha256": "64b9efc715d161daf6c22da91a6b444912fb18a52f86b83f74f3855095b6f4f7"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-01.jpg",
+      "bytes": 114036,
+      "sha256": "c17b1afad4ee709f2a64292a5926a487c93862dba05c3e4e94b62e035dae0146"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-02.jpg",
+      "bytes": 114030,
+      "sha256": "3f7871c0c8ae53888f51cb3ea485f1dee70f1a1a4cd14b6a7ef257c2fed40cf0"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-03.jpg",
+      "bytes": 116165,
+      "sha256": "91920f7b33c17828276e477b63bfd6fdf7e23540e66e42f188bad553d06f60e4"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-04.jpg",
+      "bytes": 114668,
+      "sha256": "3caed9c2bccdba8fba734c8a1db47ed675a973ad6af6c77f0909c21b3f8936f0"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-05.jpg",
+      "bytes": 115194,
+      "sha256": "126214ecee46bbea359325dd4245f4c1f9f3618442d0705c6b8167a09354d0b8"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-06.jpg",
+      "bytes": 115328,
+      "sha256": "c810e5ed82763e1f51704fa9620d365db5c305719ee90aae222588a939cefe01"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-07.jpg",
+      "bytes": 115201,
+      "sha256": "d66811d7a9b4e783bc7f3f8929a33346142a73fbc305df9f7f1cae0008423802"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-08.jpg",
+      "bytes": 115016,
+      "sha256": "7a46ba0179d6714bbd24d2b497bb9f5376cda214bf434473061d8fbe0bd1826a"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-09.jpg",
+      "bytes": 114656,
+      "sha256": "a4c5a496470b1efcb54fe56ac996123e63c7310a702e142bad2752c157504345"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/frame-10.jpg",
+      "bytes": 115264,
+      "sha256": "d5a0b5c188d30c452cc52575d173ea8433f24d5e76d5fc1b3767febda6220f94"
+    },
+    {
+      "path": "sample-data/batch-qwsy3r67/manifest.json",
+      "bytes": 1265,
+      "sha256": "d8b622eacf2397b7955b0cb7cc4aea7a8e43f47d8f2a0b420b9d0d25ff55c6ff"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-01.jpg",
+      "bytes": 118156,
+      "sha256": "b44730a061488f1f8793a83c43544afec2b16a07e85a6ee848d60f70ea6e83ea"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-02.jpg",
+      "bytes": 117720,
+      "sha256": "dae6844ec0e439b65532142a3ccf54599277987645dad4c0739285be198d84e3"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-03.jpg",
+      "bytes": 117327,
+      "sha256": "bbe47a6a58383c245d6bd189a032a549c1f67181ee6db047f348285f2e34d17b"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-04.jpg",
+      "bytes": 117305,
+      "sha256": "fcec48af7eb694b61eab931f3494cadf400a297b91f63dedffef984a3a35075f"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-05.jpg",
+      "bytes": 117189,
+      "sha256": "b88f3fd9ebf09f9676017c343a77a679781acde12a5c450e87c8cb4ba5630175"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-06.jpg",
+      "bytes": 117419,
+      "sha256": "de35e3fa3373ce9c7a5c999b98dba98e4b88dd0c018d7bba7e08556f95932030"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-07.jpg",
+      "bytes": 117975,
+      "sha256": "d4d93f8ac58c0149d12ea2b62814488a29300d9697d0f198f4ab51dbae74e305"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-08.jpg",
+      "bytes": 118048,
+      "sha256": "163a02a3cce661aa900646a4aefbaffaaa91d84a2b7139c3773b87c206925f61"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-09.jpg",
+      "bytes": 117835,
+      "sha256": "faad40141ab584aa18cb38d651482aaa38d6f423618f76caf34b61ddf96febee"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/frame-10.jpg",
+      "bytes": 118195,
+      "sha256": "209125e4397be09c0a6cf543d76478b2a7ff54849e9c2c40d5ba09900540b2e1"
+    },
+    {
+      "path": "sample-data/batch-x6p6nrta/manifest.json",
+      "bytes": 1273,
+      "sha256": "6aec82cd048677de3171e9bf245e65403a5daa3ec9acb8caca246c8a7892679c"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-01.jpg",
+      "bytes": 119080,
+      "sha256": "64634d114f79d72fccd430b744b909ae46eaade5ab706195865cd6d720ad6f8d"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-02.jpg",
+      "bytes": 117211,
+      "sha256": "5d4ff91782ef05a19d348fab966e6600eb35eab3ca7338526f27dded2f1b7434"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-03.jpg",
+      "bytes": 117553,
+      "sha256": "995697e9ceec67b9e192d163199485dfffd3223ddf140f3f3de92c9c88ae4eca"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-04.jpg",
+      "bytes": 118225,
+      "sha256": "3ad6978fab2bf2faf53607d1e0f53e173b8946f86e9f6df80aadd96aba3a7621"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-05.jpg",
+      "bytes": 118683,
+      "sha256": "2cf9d0a706bc34c76cfeb29126474afacbdde148144f19b2648e03434dc54332"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-06.jpg",
+      "bytes": 118465,
+      "sha256": "396e01c51fbdd179472f65b80ed5cae8718039d66a9d7396542833f77b3d0899"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-07.jpg",
+      "bytes": 118413,
+      "sha256": "40f8a7cf9848c288854d50eca9e90212b416ef6ecdc085b0d107cf293ee521f0"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-08.jpg",
+      "bytes": 118763,
+      "sha256": "432b33f8a1e609d86098d88c0c345b317374d25030276a4d055cf7f83d2e0a86"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-09.jpg",
+      "bytes": 118214,
+      "sha256": "613c50ad6c5c8502e21c574386f4f1a3dc20ff3464e7ca5c32f316351c64b234"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/frame-10.jpg",
+      "bytes": 117734,
+      "sha256": "4730099958893fe9fcec3c3525172ec8901a8c9cbf2b752ce64906f83f38fbc3"
+    },
+    {
+      "path": "sample-data/batch-xn_lq9jw/manifest.json",
+      "bytes": 1266,
+      "sha256": "af9aab7f6391a504bf6323084cb670764b993abcc114c1ec0da6cc1fd3e3c126"
+    },
+    {
+      "path": "sdk/DEPENDENCIES.json",
+      "bytes": 1760,
+      "sha256": "9bbbbf2a40d4afe473ca8328f1387a6589790856850bf57510b4cb2429bbf043"
+    },
+    {
+      "path": "sdk/README.md",
+      "bytes": 725,
+      "sha256": "adbea10aff33b94c0c45518b4055a1eb5deb60520bd8a1c9dac8d91a90b64dc4"
+    },
+    {
+      "path": "start_receiver.bat",
+      "bytes": 114,
+      "sha256": "7d98527ac110d8041ca76ef8241b3646de80d54b2ecfaab81238e3f94bdfc87d"
+    },
+    {
+      "path": "start_receiver.command",
+      "bytes": 127,
+      "sha256": "a5498d31506193afc38cbf66ea274584f822a2dd3d827b231971ba4fe5f9899f"
+    },
+    {
+      "path": "validation/RESULTS.md",
+      "bytes": 726,
+      "sha256": "20f9c611f5ccc32df361070ff8a69167c1aa082353d1a1415438ef271ed9df4d"
+    },
+    {
+      "path": "validation/android-build.txt",
+      "bytes": 7516,
+      "sha256": "1caa873fa880f24e700e5478d05f2954a2b6fe0637edff0370b4de9b9ef578e9"
+    },
+    {
+      "path": "validation/android-unit-tests/TEST-com.river.acewireless.analysis.SceneAnalysisTest.xml",
+      "bytes": 636,
+      "sha256": "b344e1d82fe4e425fc381ca01865a4b352cc6064151830f719f0aff8f6e8709a"
+    },
+    {
+      "path": "validation/android-unit-tests/TEST-com.river.acewireless.analysis.SceneBatchTest.xml",
+      "bytes": 818,
+      "sha256": "39fadd3e1fba707e4933954a603252692d424c1c573b05ebb846654a1d4745cc"
+    },
+    {
+      "path": "validation/android-unit-tests/TEST-com.river.acewireless.analysis.SubnetTest.xml",
+      "bytes": 464,
+      "sha256": "1c4a331a170abec3f55c74c4b3f3baadf10ea08ca95532063dcbf0689330ccd1"
+    },
+    {
+      "path": "validation/android-unit-tests/TEST-com.river.acewireless.stream.VideoFrameTest.xml",
+      "bytes": 884,
+      "sha256": "d9a30d73b7185fdd47374f0e73a7eb508024106c405213bcae586fab34872f30"
+    },
+    {
+      "path": "validation/android-unit-tests/binary/output.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "validation/android-unit-tests/binary/output.bin.idx",
+      "bytes": 1,
+      "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+    },
+    {
+      "path": "validation/android-unit-tests/binary/results.bin",
+      "bytes": 1356,
+      "sha256": "4edf458ef51992b281abee1d629a4d8cdb18255e7ceccf85d552ee146ab55e4f"
+    },
+    {
+      "path": "validation/samples-and-startup.json",
+      "bytes": 645,
+      "sha256": "d22ca0bf5d65c6a6f2c8d8f69c68a5c4445def9a834367a6ded61a3cdef60522"
+    },
+    {
+      "path": "verify_package.py",
+      "bytes": 509,
+      "sha256": "4f435812439e8c33da97b235e3c17a2efc33cdd212383bff48de3ea531ec6175"
+    }
+  ]
+}

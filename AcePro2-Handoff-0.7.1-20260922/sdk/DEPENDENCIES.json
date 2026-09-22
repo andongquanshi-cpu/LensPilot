@@ -1,0 +1,78 @@
+[
+  {
+    "coordinate": "com.arashivision.inskmp:ins_ble-android:1.2310.13",
+    "files": 8
+  },
+  {
+    "coordinate": "com.arashivision.inskmp:ins_ble:1.2310.13",
+    "files": 4
+  },
+  {
+    "coordinate": "com.arashivision.inskmp:ins_socket-android:1.2310.13",
+    "files": 8
+  },
+  {
+    "coordinate": "com.arashivision.inskmp:ins_socket:1.2310.13",
+    "files": 4
+  },
+  {
+    "coordinate": "com.arashivision.inskmp:ins_usb-android:1.2310.13",
+    "files": 8
+  },
+  {
+    "coordinate": "com.arashivision.inskmp:ins_usb:1.2310.13",
+    "files": 4
+  },
+  {
+    "coordinate": "com.arashivision.inskmp:minicamera-android:1.2310.13-feature-tob-2.1.5-20260904101959",
+    "files": 8
+  },
+  {
+    "coordinate": "com.arashivision.inskmp:minicamera:1.2310.13-feature-tob-2.1.5-20260904101959",
+    "files": 4
+  },
+  {
+    "coordinate": "com.arashivision.minicamera:fastble:1.2310.13",
+    "files": 6
+  },
+  {
+    "coordinate": "com.arashivision.sdk:graphicpath:2.901.4",
+    "files": 2
+  },
+  {
+    "coordinate": "com.arashivision.sdk:onestream:2.0.20",
+    "files": 2
+  },
+  {
+    "coordinate": "com.arashivision.sdk:sdk-bridge-android:2.2.0",
+    "files": 6
+  },
+  {
+    "coordinate": "com.arashivision.sdk:sdk-bridge:2.2.0",
+    "files": 4
+  },
+  {
+    "coordinate": "com.arashivision.sdk:sdk-camera-android:2.2.0",
+    "files": 6
+  },
+  {
+    "coordinate": "com.arashivision.sdk:sdk-camera:2.2.0",
+    "files": 4
+  },
+  {
+    "coordinate": "com.arashivision.sdk:sdk-common-android:2.2.0",
+    "files": 6
+  },
+  {
+    "coordinate": "com.arashivision.sdk:sdk-common:2.2.0",
+    "files": 4
+  },
+  {
+    "coordinate": "com.arashivision:camerastream:1.2220.1",
+    "files": 6
+  },
+  {
+    "coordinate": "com.insta360.infrastructure:thread:1.0.5",
+    "files": 2
+  }
+]

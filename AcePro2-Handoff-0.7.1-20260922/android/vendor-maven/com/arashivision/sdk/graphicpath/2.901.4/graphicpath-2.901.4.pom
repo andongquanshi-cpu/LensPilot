@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.arashivision.sdk</groupId>
+  <artifactId>graphicpath</artifactId>
+  <version>2.901.4</version>
+  <packaging>aar</packaging>
+  <name>graphicpath</name>
+  <description>graphicpath</description>
+  <url>https://gitlab.insta360.com/platform/bmgmediaandroid/-/tree/master/bmgmedia</url>
+</project>

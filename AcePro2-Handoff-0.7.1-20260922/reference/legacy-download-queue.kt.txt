@@ -1,0 +1,44 @@
+// Historical reference only; not compiled. Original file/FileManagementViewModel.kt lines 75-117.
+
+    private suspend fun processDownloadQueue() {
+        // 限制最多只有一个文件在下载 (单线程下载，防止并发 OOM)
+        for (uri in downloadQueue) {
+            performDownload(uri)
+        }
+    }
+
+    private fun enqueueDownload(uri: String) {
+        // 1. 检查当前状态，防止重复入队
+        if (_state.value.fileStatusMap[uri] in setOf(FileStatus.IN_QUEUE, FileStatus.DOWNLOADING, FileStatus.DOWNLOADED)) {
+            return
+        }
+
+        // 2. 更新状态为排队中 (要求 2: 准备下载状态)
+        updateFileStatus(uri, FileStatus.IN_QUEUE)
+
+        // 3. 将任务发送到下载通道
+        downloadQueue.trySend(uri)
+    }
+
+    private fun updateFileStatus(uri: String, status: FileStatus) {
+        _state.update {
+            it.copy(fileStatusMap = it.fileStatusMap + (uri to status))
+        }
+    }
+
+    private suspend fun performDownload(uri: String) {
+        updateFileStatus(uri, FileStatus.DOWNLOADING) // 状态变更为正在下载 (要求 2)
+
+        val fullUrl = CameraSessionHolder.cameraDevice!!.file.getEndpoint() + uri
+        val downloadPath = state.value.downloadPath
+
+        CameraSessionHolder.cameraDevice!!.file.downloadMediaFile(fullUrl, downloadPath).onSuccess {
+            updateFileStatus(uri, FileStatus.DOWNLOADED)
+            _state.update { it.copy(toastMessage = "下载完成！") }
+        }.onFailure { ex ->
+            updateFileStatus(uri, FileStatus.FAILED)
+            Logger.d("http","下载失败:${ex.message}")
+            _state.update { it.copy(toastMessage = "下载失败: ${ex.message}") }
+        }
+    }
+

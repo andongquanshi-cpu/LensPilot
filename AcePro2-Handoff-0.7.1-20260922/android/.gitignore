@@ -1,0 +1,10 @@
+/.gradle/
+/.idea/
+/local.properties
+**/build/
+*.iml
+/.sdk-inspect/
+/.kotlin/
+
+__pycache__/
+received_batches/
