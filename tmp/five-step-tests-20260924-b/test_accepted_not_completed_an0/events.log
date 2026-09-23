@@ -1,0 +1,4 @@
+{"event_id":"c22f2d96d5754bc1a69d85a13bd31b16","timestamp":1790191212.1616218,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"f86ffcba2f8546fbaef339a1e77f3f40","timestamp":1790191212.1728256,"type":"command","message":"模拟设备切换请求","frame_id":null,"decision_id":"fb75da70e6694940a0c8566a529fce8c","command_id":"182563d3e28841c8b4d5657fe0b1b2f1","metrics":{}}
+{"event_id":"4eaef707127a471499c4025b300a82c4","timestamp":1790191212.1831284,"type":"mode","message":"拍摄锁定已开启","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"97b98b5fc68b42f39399f6643a66678e","timestamp":1790191212.1918287,"type":"completed","message":"模拟执行到位（非真实硬件）","frame_id":null,"decision_id":"fb75da70e6694940a0c8566a529fce8c","command_id":"182563d3e28841c8b4d5657fe0b1b2f1","metrics":{"completion_ms":19.002199172973633}}

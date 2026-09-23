@@ -1,0 +1,3 @@
+{"event_id":"ed83d9380ee042c89e438ba10a1189c2","timestamp":1790191212.7023087,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"4b6144f535eb428a8cdbd1d5956e459c","timestamp":1790191212.7220974,"type":"source","message":"画面源已切换：new","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"80b68cd0cedd486aa8224dc961d8a114","timestamp":1790191212.7327049,"type":"stale_result","message":"已丢弃过期或状态变化前的分析","frame_id":"f3746346794e435baf1761a4ab85f06b","decision_id":null,"command_id":null,"metrics":{}}

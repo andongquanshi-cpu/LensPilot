@@ -6,9 +6,10 @@ from pathlib import Path
 
 from .config import load_settings
 from .decision import DecisionEngine
-from .models import DeviceState, UserIntent
+from .models import DeviceState, UserIntent, Filter
 from .vision import validate_analysis
 from .vlm import create_vision, frame_from_jpeg
+from .show import is_capture
 
 _lock = threading.Lock()
 _seen = set()
@@ -17,6 +18,8 @@ _seen = set()
 def analyze_received_batch(directory, settings=None, vision=None):
     directory = Path(directory)
     manifest = json.loads((directory / 'manifest.json').read_text(encoding='utf-8'))
+    if is_capture(manifest):
+        return None  # Final photos complete a round, never trigger another selection.
     request_id = manifest.get('requestId')
     if not isinstance(request_id, str) or not request_id:
         raise ValueError('批次缺少 requestId')
@@ -33,7 +36,8 @@ def analyze_received_batch(directory, settings=None, vision=None):
         context = {'supported_filters': list(settings.slots), 'installed_filter': None}
         raw = vision.analyze_sync(frame, context) if hasattr(vision, 'analyze_sync') else asyncio.run(vision.analyze(frame, context))
         analysis = validate_analysis(raw, frame, settings)
-        decision = DecisionEngine(settings).evaluate(analysis, DeviceState(), UserIntent())
+        decision = DecisionEngine(settings).evaluate(analysis, DeviceState(), UserIntent(), recommendation_only=True)
+        needs_distance = decision.target == Filter.CLOSE_UP and not settings.demo_distance_verified
         payload = {
             'requestId': request_id,
             'file': 'frame-01.jpg',
@@ -42,6 +46,8 @@ def analyze_received_batch(directory, settings=None, vision=None):
                 'target': decision.target,
                 'reason': decision.reason,
                 'actionable': False,
+                'commandTarget': Filter.KEEP if needs_distance else decision.target,
+                'executionNote': '近摄是创作建议；请先确认工作距离，本轮不自动切近摄。' if needs_distance else '',
             },
             'motion': 'not_sent',
         }

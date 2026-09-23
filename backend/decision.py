@@ -12,13 +12,25 @@ class DecisionEngine:
     def reset(self):
         self.candidate, self.count = Filter.KEEP, 0
 
-    def evaluate(self, analysis, state, intent):
+    def evaluate(self, analysis, state, intent, *, recommendation_only=False):
         if time.time() - self.last_observation > self.config.max_frame_age:
             self.reset()
         self.last_observation = time.time()
         f, p = analysis.scene_features, intent.preference
         target = analysis.recommended_filter
         reason = analysis.reason
+        if recommendation_only and target == Filter.KEEP:
+            # Derive creative candidates only from structured observations, never reason text.
+            if f.glass_or_water and f.reflection_obscures_subject and p != 'preserve_reflections':
+                target, reason = Filter.CPL, '反光影响主体，可尝试偏振镜减弱反光。'
+            elif f.close_detail:
+                target, reason = Filter.CLOSE_UP, '画面以近景细节为主，可尝试近摄镜放大细节。'
+            elif f.highlights and f.portrait and p != 'sharp':
+                target, reason = Filter.BLACK_MIST, '人像与高光可尝试黑柔镜，营造柔和氛围。'
+            elif f.point_lights and p != 'sharp':
+                target, reason = Filter.STAR, '画面存在点状亮光，可尝试星光镜创造星芒。'
+            elif f.highlights and f.soft_style and p != 'sharp':
+                target, reason = Filter.BLACK_MIST, '灯光氛围可尝试黑柔镜，柔化高光边缘。'
         if p == 'star' and f.point_lights:
             target, reason = Filter.STAR, '星芒偏好生效，画面存在点状亮光。'
         elif p == 'soft' and f.highlights:
@@ -28,7 +40,7 @@ class DecisionEngine:
         # The model suggests; explicit observable prerequisites constrain actuation.
         if target == Filter.CPL and (not (f.glass_or_water and f.reflection_obscures_subject) or p == 'preserve_reflections'):
             target, reason = Filter.KEEP, '反光依据不足，或用户希望保留倒影。'
-        if target == Filter.CLOSE_UP and not ((f.close_detail or p == 'detail') and self.config.demo_distance_verified):
+        if target == Filter.CLOSE_UP and not ((f.close_detail or p == 'detail') and (recommendation_only or self.config.demo_distance_verified)):
             target, reason = Filter.KEEP, '没有经实测确认的近摄距离约束，保持当前镜片。'
         if target == Filter.BLACK_MIST and (p == 'sharp' or not (f.highlights and (f.portrait or f.soft_style or p == 'soft'))):
             target, reason = Filter.KEEP, '尊重清晰细节偏好，或缺少柔和创作依据。'
@@ -47,6 +59,8 @@ class DecisionEngine:
             target, reason = Filter.KEEP, '硬件未配置该镜片或空位。'
         if analysis.uncertainty > 0.65:
             target, reason = Filter.KEEP, '分析不确定性较高，保持当前状态。'
+        if recommendation_only:
+            return Decision(frame_id=analysis.frame_id, target=target, reason=reason, actionable=False)
         if target in (Filter.KEEP, state.actual_filter):
             self.reset()
             return Decision(frame_id=analysis.frame_id, reason=reason if target == Filter.KEEP else '当前已是所需镜片。')

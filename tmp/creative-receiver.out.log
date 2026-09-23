@@ -1,0 +1,33 @@
+Listening on :8765; batches -> C:\Users\35552\Desktop\trae projects\insta\AcePro2-Handoff-0.7.1-20260922\runtime\received_batches
+CHUNKS 131072/893131 completed=False
+CHUNKS 262144/893131 completed=False
+CHUNKS 393216/893131 completed=False
+CHUNKS 524288/893131 completed=False
+CHUNKS 655360/893131 completed=False
+CHUNKS 786432/893131 completed=False
+RECEIVED C:\Users\35552\Desktop\trae projects\insta\AcePro2-Handoff-0.7.1-20260922\runtime\received_batches\batch-or7adcc4 (10 frames)
+CHUNKS 893131/893131 completed=True
+ANALYZED C:\Users\35552\Desktop\trae projects\insta\AcePro2-Handoff-0.7.1-20260922\runtime\received_batches\batch-or7adcc4
+CHUNKS 131072/2708095 completed=False
+CHUNKS 262144/2708095 completed=False
+CHUNKS 393216/2708095 completed=False
+CHUNKS 524288/2708095 completed=False
+CHUNKS 655360/2708095 completed=False
+CHUNKS 786432/2708095 completed=False
+CHUNKS 917504/2708095 completed=False
+CHUNKS 1048576/2708095 completed=False
+CHUNKS 1179648/2708095 completed=False
+CHUNKS 1310720/2708095 completed=False
+CHUNKS 1441792/2708095 completed=False
+CHUNKS 1572864/2708095 completed=False
+CHUNKS 1703936/2708095 completed=False
+CHUNKS 1835008/2708095 completed=False
+CHUNKS 1966080/2708095 completed=False
+CHUNKS 2097152/2708095 completed=False
+CHUNKS 2228224/2708095 completed=False
+CHUNKS 2359296/2708095 completed=False
+CHUNKS 2490368/2708095 completed=False
+CHUNKS 2621440/2708095 completed=False
+RECEIVED C:\Users\35552\Desktop\trae projects\insta\AcePro2-Handoff-0.7.1-20260922\runtime\received_batches\batch-3njo7kd1 (1 frames)
+CHUNKS 2708095/2708095 completed=True
+ANALYZED C:\Users\35552\Desktop\trae projects\insta\AcePro2-Handoff-0.7.1-20260922\runtime\received_batches\batch-3njo7kd1

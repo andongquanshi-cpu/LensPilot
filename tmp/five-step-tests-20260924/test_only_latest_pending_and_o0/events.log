@@ -1,0 +1,2 @@
+{"event_id":"faba50bcfb134853ac7a76198913b600","timestamp":1790191153.3933601,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"0b2cb6cfe30e4ea5b9d4653a264b2f90","timestamp":1790191153.577185,"type":"analysis","message":"测试候选","frame_id":"2b62f7c67b0a40cea706f7720f8d2110","decision_id":"b3d4d2a43c624e85bbd6cc2bac1d3917","command_id":null,"metrics":{"model_ms":111.95540428161621,"frame_age_ms":162.86873817443848}}

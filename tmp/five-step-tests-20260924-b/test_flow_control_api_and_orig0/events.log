@@ -1,0 +1,2 @@
+{"event_id":"56c03245b04c41c29c3d5a0caa5420a6","timestamp":1790191211.2377672,"type":"synchronizing","message":"连接后查询实际槽位","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"c40b1a173d5549daa7efffd970a16dce","timestamp":1790191211.302428,"type":"position","message":"模拟位置已同步","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

@@ -1,0 +1,27 @@
+{
+  "requestId": "req-close",
+  "file": "frame-01.jpg",
+  "analysis": {
+    "frame_id": "req-close",
+    "subject": "线缆",
+    "scene_features": {
+      "reflection_obscures_subject": false,
+      "glass_or_water": false,
+      "close_detail": true,
+      "distance_verified": false,
+      "portrait": false,
+      "highlights": false,
+      "point_lights": false,
+      "soft_style": false
+    },
+    "recommended_filter": "CLOSE_UP",
+    "reason": "离镜头很近",
+    "uncertainty": 0.3
+  },
+  "decision": {
+    "target": "KEEP",
+    "reason": "没有经实测确认的近摄距离约束，保持当前镜片。",
+    "actionable": false
+  },
+  "motion": "not_sent"
+}

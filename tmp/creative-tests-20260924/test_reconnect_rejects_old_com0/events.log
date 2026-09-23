@@ -1,0 +1,6 @@
+{"event_id":"be4d35213349494b90f636c1d652ce5b","timestamp":1790199550.8985145,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"e6309f2e23c5412e85623ef1f9b8e064","timestamp":1790199550.9047017,"type":"command","message":"模拟设备切换请求","frame_id":null,"decision_id":"616d20fcc43642e4be2a47167987e3b7","command_id":"31323463d5cc4f3e99aad2e0492389cd","metrics":{}}
+{"event_id":"584e5c4629024a4f8cf6e026723b3e0b","timestamp":1790199550.9101238,"type":"mode","message":"拍摄锁定已开启","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"4167233d86c841a9b97ba19d0663469d","timestamp":1790199550.9146397,"type":"disconnected","message":"设备连接已断开","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"8879f13a4bb7431694700cb2e004c2cd","timestamp":1790199550.9206145,"type":"synchronizing","message":"连接后查询实际槽位","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"f04fd688c8d0491d8a43435b758d7a30","timestamp":1790199550.9255917,"type":"position","message":"收到可信位置同步反馈","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

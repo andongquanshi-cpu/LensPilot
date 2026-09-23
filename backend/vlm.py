@@ -56,13 +56,19 @@ def normalize_scene(raw, frame_id):
     echoed = raw.get('frame_id') or frame_id
     reason = str(raw.get('reason') or '模型未给出理由')[:250]
     subject = str(raw.get('subject') or '未命名')[:100]
+    uncertainty = raw.get('uncertainty', 1)
+    if isinstance(uncertainty, str):
+        try:
+            uncertainty = float(uncertainty.strip())
+        except ValueError:
+            pass  # Invalid values remain subject to strict schema validation.
     return {
         'frame_id': echoed,
         'subject': subject,
         'scene_features': features,
         'recommended_filter': raw.get('recommended_filter') or 'KEEP',
         'reason': reason,
-        'uncertainty': raw.get('uncertainty', 1),
+        'uncertainty': uncertainty,
     }
 
 
@@ -102,8 +108,17 @@ class DashScopeVision:
         prompt = (
             SYSTEM_RULES
             + ' 布尔字段只能是 true 或 false。distance_verified 必须是 false。'
-            + ' 玻璃或水面反光挡住主体才建议 CPL。小而分开的点状光源才建议 STAR，大块发光面不算。'
-            + ' 有人脸且有高光才建议 BLACK_MIST。看不清就 KEEP，并把 uncertainty 调高。'
+            + ' 任务是为摄影爱好者推荐值得尝试的实体滤镜表达，不是只在照片有缺陷时才修复。画面已经清晰、曝光正常，并不是 KEEP 的理由。'
+            + ' 先独立填写可见场景特征，再选与特征匹配的一片镜；不要为了 KEEP 把实际看见的特征全部填 false。'
+            + ' point_lights：画面中可分辨的小亮点或局部强光，如路灯、车灯、装饰灯珠、串灯、嵌入式小灯。'
+            + ' 不要求光源在远处、独立安装或已经产生星芒；透过纱网仍可分辨的小亮点也可成立。只有大片均匀发光面或无法分辨的弥散光团不算。存在明确点状亮光可推荐 STAR 来创造星芒。'
+            + ' close_detail：取景明显围绕小物件、花朵、饰品、纹理等局部细节，期望放大细节时可推荐 CLOSE_UP。'
+            + ' 普通房间全景或仅有一张桌子不算细节特写。推荐近摄不等于确认距离，距离与焦点由拍摄者实测调整，不因无法从图像测距而否决候选。'
+            + ' highlights：可见明亮高光或灯光。portrait：人像是画面主体。soft_style：暖灯、逆光或灯光氛围适合尝试柔和晕光，不要求用户先说要柔光。'
+            + ' 有高光且有人像或柔和灯光氛围，可推荐 BLACK_MIST；无需限制为正脸。黑柔不能修复过曝。'
+            + ' 玻璃或水面的反光遮挡主体、影响观察细节时可推荐 CPL；不把普通发光灯当反光。'
+            + ' 多种条件成立时优先照顾主体：小物细节可近摄，人像配高光可黑柔，灯光为主可星光。理由写明可见依据和预期表达。'
+            + ' 确实没有相关特征，或画面看不清、依据不可靠时才 KEEP。不要强制每张图都换镜；不确定时如实提高 uncertainty。'
             + f' frame_id 必须原样返回：{frame_id}。'
             + ' 输出字段：frame_id, subject, scene_features, recommended_filter, reason, uncertainty。'
         )

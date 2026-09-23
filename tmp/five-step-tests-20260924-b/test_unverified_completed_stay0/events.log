@@ -1,0 +1,5 @@
+{"event_id":"963eed9bf7e4426c8b1c60a086790d17","timestamp":1790191212.243597,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"48ebfac5e7f842d4ad2dc36eceea9cde","timestamp":1790191212.255169,"type":"command","message":"模拟设备切换请求","frame_id":null,"decision_id":"f8c45a2551ac45af93307723e0405bcc","command_id":"44636e2bca1b44e191c8889fa643e9bc","metrics":{}}
+{"event_id":"7e20c4359f7e49b7ad50202b379e043f","timestamp":1790191212.2642903,"type":"mode","message":"拍摄锁定已开启","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"6f4f76da22b24faaaaf489fc30a45063","timestamp":1790191212.2725043,"type":"command_unknown","message":"未验证到位或执行失败，需要位置查询","frame_id":null,"decision_id":null,"command_id":"44636e2bca1b44e191c8889fa643e9bc","metrics":{}}
+{"event_id":"d75e241e0b84411e8d56772d26cc7c4b","timestamp":1790191212.2895796,"type":"synchronizing","message":"未验证到位或执行失败，需要位置查询；自动模式已暂停，不重发运动","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

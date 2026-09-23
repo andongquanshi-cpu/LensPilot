@@ -1,0 +1,6 @@
+{"event_id":"3c22a960e822432ebbeba71412befd48","timestamp":1790199554.0291681,"type":"synchronizing","message":"连接后查询实际槽位","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"0b8df2921c044526b56ab8064238a941","timestamp":1790199554.034607,"type":"position","message":"收到可信位置同步反馈","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"23da5e05301f41f291675e887f33e589","timestamp":1790199554.1362376,"type":"command","message":"已发送镜片切换请求","frame_id":null,"decision_id":"cfb21634443f4e0bae2acb09153e6110","command_id":"57cd0a35cfcf484aa1ab22073972bb87","metrics":{}}
+{"event_id":"ea8a95399c8c438a83075215b07c0c7a","timestamp":1790199554.1423147,"type":"mode","message":"拍摄锁定已开启","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"3c078d29943646c58b7976b691fe79de","timestamp":1790199554.1519244,"type":"completed","message":"收到可信的到位反馈","frame_id":null,"decision_id":"cfb21634443f4e0bae2acb09153e6110","command_id":"57cd0a35cfcf484aa1ab22073972bb87","metrics":{"completion_ms":15.68150520324707}}
+{"event_id":"b43ed0bf4eb44088b4cd317f8b2d6aa0","timestamp":1790199554.159999,"type":"disconnected","message":"设备连接已断开","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

@@ -1,0 +1,2 @@
+{"event_id":"dbb4640aee04425188ec8728e6a02c2b","timestamp":1790199555.622527,"type":"source","message":"画面源已切换：sample","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"5fe3eae502eb44adb950f4839c1f416f","timestamp":1790199556.3113933,"type":"source_end","message":"视频文件结束","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

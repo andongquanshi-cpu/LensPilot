@@ -1,0 +1,27 @@
+{
+  "requestId": "req-1",
+  "file": "frame-01.jpg",
+  "analysis": {
+    "frame_id": "req-1",
+    "subject": "纱帘",
+    "scene_features": {
+      "reflection_obscures_subject": false,
+      "glass_or_water": false,
+      "close_detail": false,
+      "distance_verified": false,
+      "portrait": false,
+      "highlights": false,
+      "point_lights": true,
+      "soft_style": false
+    },
+    "recommended_filter": "STAR",
+    "reason": "点状亮光",
+    "uncertainty": 0.1
+  },
+  "decision": {
+    "target": "STAR",
+    "reason": "候选连续一致 1/3 次。",
+    "actionable": false
+  },
+  "motion": "not_sent"
+}

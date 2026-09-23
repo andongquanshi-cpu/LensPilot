@@ -1,0 +1,2 @@
+{"event_id":"a262414704cc4c4880f11c6a8b67a269","timestamp":1790191210.3822856,"type":"command","message":"模拟设备切换请求","frame_id":null,"decision_id":"80151e536a53458ab707472343d38265","command_id":"1924f303d9e241728444ddac18a75762","metrics":{}}
+{"event_id":"5aff7927fbcb4e0b9aa17da9dec002ad","timestamp":1790191210.4471889,"type":"mode","message":"拍摄锁定已开启","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

@@ -1,0 +1,50 @@
+[
+  {
+    "case": "night-street",
+    "error": "ValidationError",
+    "detail": [
+      {
+        "type": "float_type",
+        "loc": [
+          "uncertainty"
+        ],
+        "msg": "Input should be a valid number",
+        "url": "https://errors.pydantic.dev/2.12/v/float_type"
+      }
+    ]
+  },
+  {
+    "case": "ceiling-lights",
+    "model": "STAR",
+    "target": "STAR",
+    "reason": "画面中存在大量可分辨的小型点状亮光（嵌入式灯珠/装饰灯），透过纱网仍清晰可见，适合用STAR滤镜创造星芒效果增强氛围",
+    "features": {
+      "reflection_obscures_subject": false,
+      "glass_or_water": false,
+      "close_detail": false,
+      "distance_verified": false,
+      "portrait": false,
+      "highlights": true,
+      "point_lights": true,
+      "soft_style": false
+    },
+    "uncertainty": 0.1
+  },
+  {
+    "case": "table-detail",
+    "model": "CLOSE_UP",
+    "target": "CLOSE_UP",
+    "reason": "画面聚焦于前景瓶身局部，景深极浅，背景虚化明显，属典型近摄细节场景，适合用 CLOSE_UP 镜片强化微距表现与纹理清晰度",
+    "features": {
+      "reflection_obscures_subject": false,
+      "glass_or_water": false,
+      "close_detail": true,
+      "distance_verified": false,
+      "portrait": false,
+      "highlights": false,
+      "point_lights": false,
+      "soft_style": false
+    },
+    "uncertainty": 0.2
+  }
+]

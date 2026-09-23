@@ -1,0 +1,2 @@
+{"event_id":"76f700f369cc4697ae8ab2e3fd6214d5","timestamp":1790191153.8189151,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"faa7c5d39de0409d99de6e7ae5a861d2","timestamp":1790191153.8536797,"type":"source","message":"画面源已切换：new","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

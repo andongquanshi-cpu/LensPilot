@@ -1,0 +1,3 @@
+{"event_id":"3f5dea941ce547aaa9b21abd1b7b1e63","timestamp":1790199549.2932808,"type":"disconnected","message":"设备心跳超时","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"07adf34a10164702a090eac6aa4d8c1f","timestamp":1790199549.340217,"type":"recording","message":"录像状态更新：stopped（相机桥接报告）","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"48f65a8a349449578a333ad1d20c6726","timestamp":1790199549.4075632,"type":"recording","message":"录像状态更新：unknown（相机桥接录像报告已过期）","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

@@ -66,6 +66,19 @@ class Client:
         return {'choices': [{'message': {'content': self.content}}]}
 
 
+@pytest.mark.parametrize('value', ['0.2', ' 0.2 '])
+def test_numeric_uncertainty_string(value):
+    raw = normalize_scene({'uncertainty': value}, 'frame-1')
+    assert validate_analysis(raw, frame(), Settings()).uncertainty == 0.2
+
+
+@pytest.mark.parametrize('value', [True, 'nan', 'inf', 'unknown', '-0.2', '1.2'])
+def test_invalid_uncertainty_is_rejected(value):
+    raw = normalize_scene({'uncertainty': value}, 'frame-1')
+    with pytest.raises(ValueError):
+        validate_analysis(raw, frame(), Settings())
+
+
 class QueueClient:
     def __init__(self, contents):
         self.contents = list(contents)
@@ -165,8 +178,11 @@ class CloseVision:
         }
 
 
-def test_unverified_close_up_stays_keep(tmp_path):
+def test_unverified_close_up_shows_recommendation_without_command(tmp_path):
     directory = _batch(tmp_path, 'req-close')
     payload = analyze_received_batch(directory, settings(tmp_path), CloseVision())
     assert payload['analysis']['recommended_filter'] == 'CLOSE_UP'
-    assert payload['decision']['target'] == 'KEEP'
+    assert payload['decision']['target'] == 'CLOSE_UP'
+    assert payload['decision']['commandTarget'] == 'KEEP'
+    assert payload['decision']['actionable'] is False
+    assert '距离' in payload['decision']['executionNote']

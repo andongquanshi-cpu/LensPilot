@@ -1,0 +1,2 @@
+{"event_id":"8b5c1a2160aa44f6b9cf47f02d32415c","timestamp":1790199751.3428323,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"61be226847024268997239b309922852","timestamp":1790199751.3551881,"type":"analysis_error","message":"分析失败或校验未通过，不执行运动（ValueError）","frame_id":"b9b63209de6f4abc8becc7e6496fb9b2","decision_id":null,"command_id":null,"metrics":{}}

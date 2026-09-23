@@ -16,7 +16,7 @@ from .models import StrictModel, Filter, CommandFeedback
 from .service import Controller
 from .sources import SourceManager
 from .frames import normalize_image
-from .show import batch_roots, frame_file, lens_link, show_state
+from .show import batch_roots, frame_file, lens_link, ShowFlow
 from .transport import BridgeTransport
 
 
@@ -28,6 +28,11 @@ class SourceRequest(StrictModel):
 
 class ModeRequest(StrictModel):
     action: Literal['auto', 'pause', 'lock', 'unlock']
+
+
+class ShowArmRequest(StrictModel):
+    requestId: str = Field(min_length=1, max_length=200)
+    delaySeconds: float = Field(default=3, ge=1, le=30)
 
 
 class SelectRequest(StrictModel):
@@ -99,10 +104,26 @@ def create_app(config=None):
         return JSONResponse(status_code=409, content={'detail': str(exc)})
 
     repo = Path(__file__).resolve().parent.parent
+    app.state.show_flow = ShowFlow(batch_roots(repo))
+
+    def local_show_control(request: Request):
+        if request.client.host not in ('127.0.0.1', '::1', 'testclient'):
+            raise HTTPException(403, '请从本机控制演示')
+        origin = request.headers.get('origin')
+        if origin and origin not in config.allowed_origins:
+            raise HTTPException(403, '页面来源不受信任')
+
+    @app.post('/api/show/arm', dependencies=[Depends(local_show_control)])
+    def show_arm(body: ShowArmRequest):
+        return app.state.show_flow.arm(body.requestId, body.delaySeconds)
+
+    @app.post('/api/show/reset', dependencies=[Depends(local_show_control)])
+    def show_reset():
+        return app.state.show_flow.reset()
 
     @app.get('/api/show')
     def show():
-        payload = show_state(batch_roots(repo))
+        payload = app.state.show_flow.state()
         device = app.state.controller.state
         payload['lens'] = lens_link(device.connection, device.simulated)
         return payload

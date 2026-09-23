@@ -1,0 +1,2 @@
+{"event_id":"e413ad70a39a4a558468fa73d57fa43e","timestamp":1790199750.7350197,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"29c35c26da044c88be063a9ae94421b0","timestamp":1790199750.7408125,"type":"command","message":"模拟设备切换请求","frame_id":null,"decision_id":"e0693b9ae7074ff0aac2a42a573cc169","command_id":"bdbc02cb98324f1bab93cf6247728128","metrics":{}}

@@ -1,0 +1,5 @@
+{"event_id":"dc96f4651568457abc7804b65d183acc","timestamp":1790199750.9689534,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"60acb45df7c843e1ac888d40b78e8ffe","timestamp":1790199750.9754722,"type":"command","message":"模拟设备切换请求","frame_id":null,"decision_id":"c4c929199d274f1580b17c4e7fba9d06","command_id":"ed500315136f4f82aea90bbc127a54d3","metrics":{}}
+{"event_id":"392590c465f640e8a4fb8fe5d0076a5d","timestamp":1790199750.9808555,"type":"mode","message":"拍摄锁定已开启","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"8d2a8ed316fe4212acccd252fb5e5f97","timestamp":1790199750.9855156,"type":"command_unknown","message":"指令超时，忽略迟到反馈","frame_id":null,"decision_id":null,"command_id":"ed500315136f4f82aea90bbc127a54d3","metrics":{}}
+{"event_id":"612d89703ed643beb258f75157d29494","timestamp":1790199750.9901233,"type":"synchronizing","message":"指令超时，忽略迟到反馈；自动模式已暂停，不重发运动","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

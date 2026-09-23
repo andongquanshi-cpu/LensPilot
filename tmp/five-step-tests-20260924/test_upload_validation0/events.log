@@ -1,0 +1,3 @@
+{"event_id":"fad82d2756a94aaf992aac11ad4f1943","timestamp":1790191155.9163048,"type":"synchronizing","message":"连接后查询实际槽位","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"3893b9b99a804f6690bbf1691dbb8e71","timestamp":1790191155.9321272,"type":"source","message":"画面源已切换：HTTP / 本地图片","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"a862c27889c648deb7622d864fccdce6","timestamp":1790191156.158943,"type":"position","message":"模拟位置已同步","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}

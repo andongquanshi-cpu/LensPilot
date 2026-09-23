@@ -1,0 +1,2 @@
+{"event_id":"c49c0406cd2c44459877696fdf216b5d","timestamp":1790191216.6867628,"type":"source","message":"画面源已切换：test","frame_id":null,"decision_id":null,"command_id":null,"metrics":{}}
+{"event_id":"8beda92e953e4e0a96c7b0498ac0201c","timestamp":1790191216.9258533,"type":"analysis","message":"图片采集时镜片未经确认，仅展示分析，不自动切换。","frame_id":"5cecc648eb2a49899820bd753f0506b0","decision_id":"ddf746f02266419bb4cf9724674f9c6d","command_id":null,"metrics":{"model_ms":216.04585647583008,"frame_age_ms":216.42732620239258}}
