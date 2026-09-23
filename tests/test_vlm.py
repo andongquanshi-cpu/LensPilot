@@ -66,6 +66,56 @@ class Client:
         return {'choices': [{'message': {'content': self.content}}]}
 
 
+class QueueClient:
+    def __init__(self, contents):
+        self.contents = list(contents)
+        self.calls = 0
+
+    def post(self, url, json, headers):
+        self.calls += 1
+        self.content = self.contents.pop(0)
+        return self
+
+    def raise_for_status(self):
+        return None
+
+    def json(self):
+        return {'choices': [{'message': {'content': self.content}}]}
+
+
+def _scene(recommended, **features):
+    base = {
+        'frame_id': 'frame-1', 'subject': '测试', 'recommended_filter': recommended,
+        'reason': '测试理由', 'uncertainty': 0.2,
+        'scene_features': {
+            'glass_or_water': False, 'reflection_obscures_subject': False,
+            'point_lights': False, 'portrait': False, 'highlights': False,
+            'soft_style': False, 'close_detail': False,
+        },
+    }
+    base['scene_features'].update(features)
+    return json.dumps(base)
+
+
+def test_mismatch_retries_then_keeps_consistent_answer(tmp_path):
+    client = QueueClient([
+        _scene('CPL'),
+        _scene('CPL', glass_or_water=True, reflection_obscures_subject=True),
+    ])
+    scene = DashScopeVision(settings(tmp_path), client=client).analyze_sync(frame(), {})
+    assert client.calls == 2
+    assert scene['recommended_filter'] == 'CPL'
+    assert scene['scene_features']['glass_or_water'] is True
+
+
+def test_second_mismatch_becomes_keep(tmp_path):
+    client = QueueClient([_scene('STAR'), _scene('STAR')])
+    scene = DashScopeVision(settings(tmp_path), client=client).analyze_sync(frame(), {})
+    assert client.calls == 2
+    assert scene['recommended_filter'] == 'KEEP'
+    assert '不一致' in scene['reason']
+
+
 def test_dashscope_rejects_wrong_frame_id(tmp_path):
     vision = DashScopeVision(settings(tmp_path), client=Client(json.dumps({
         'frame_id': 'other', 'subject': '灯', 'scene_features': {'point_lights': True},

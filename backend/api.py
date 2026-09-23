@@ -16,6 +16,7 @@ from .models import StrictModel, Filter, CommandFeedback
 from .service import Controller
 from .sources import SourceManager
 from .frames import normalize_image
+from .show import batch_roots, frame_file, lens_link, show_state
 from .transport import BridgeTransport
 
 
@@ -96,6 +97,22 @@ def create_app(config=None):
     async def invalid(request, exc):
         from fastapi.responses import JSONResponse
         return JSONResponse(status_code=409, content={'detail': str(exc)})
+
+    repo = Path(__file__).resolve().parent.parent
+
+    @app.get('/api/show')
+    def show():
+        payload = show_state(batch_roots(repo))
+        device = app.state.controller.state
+        payload['lens'] = lens_link(device.connection, device.simulated)
+        return payload
+
+    @app.get('/api/show/frame')
+    def show_frame(request_id: str = '', index: int = 1):
+        path = frame_file(batch_roots(repo), request_id, index)
+        if path is None:
+            return Response(status_code=204)
+        return FileResponse(path, media_type='image/jpeg')
 
     @app.get('/api/health')
     def health():

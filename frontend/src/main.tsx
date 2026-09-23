@@ -1,68 +1,103 @@
-import React, {useEffect, useRef, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
+import type {CSSProperties} from 'react'
 import {createRoot} from 'react-dom/client'
-import {Aperture, ArrowUpRight, Camera, ChevronDown, CircleHelp, Eye, Focus, ImagePlus, Layers, LockKeyhole, Play, Radio, ScanLine, Send, Settings2, Sparkles, Waves, Wifi, X} from 'lucide-react'
-import type {Config, Filter, Frame, Snapshot} from './types'
+import {ArrowUpRight, Aperture, Check, Focus, Pause, RotateCcw, Sparkles, Waves} from 'lucide-react'
 import './style.css'
 
 const lenses = [
- {id:'CPL' as Filter,name:'偏振镜',en:'POLARIZER',icon:Waves,desc:'减弱合适角度的水面、玻璃反光',color:'#7db8b5'},
- {id:'CLOSE_UP' as Filter,name:'近摄镜',en:'CLOSE-UP',icon:Focus,desc:'让近距离的小细节成为主角',color:'#d1b795'},
- {id:'BLACK_MIST' as Filter,name:'黑柔镜',en:'BLACK MIST',icon:Sparkles,desc:'柔化高光，留下温柔的氛围',color:'#a8abd3'},
- {id:'STAR' as Filter,name:'星光镜',en:'STAR FILTER',icon:Aperture,desc:'把点状亮光变成画面里的星芒',color:'#b8bf7c'},
+  {id:'CPL',name:'偏振镜',english:'POLARIZER',icon:Waves,title:'让反光，轻一点。',hint:'留住风景里的清晰。'},
+  {id:'CLOSE_UP',name:'近摄镜',english:'CLOSE UP',icon:Focus,title:'小细节，也有大世界。',hint:'把目光，放近一点。'},
+  {id:'BLACK_MIST',name:'黑柔镜',english:'BLACK MIST',icon:Sparkles,title:'给这一刻，一点柔光。',hint:'让高光拥有柔软的边缘。'},
+  {id:'STAR',name:'星光镜',english:'STAR FILTER',icon:Aperture,title:'让灯光，长出星芒。',hint:'为点状亮光，添一点表达。'},
 ]
-const name = (v:string|null|undefined)=>lenses.find(x=>x.id===v)?.name ?? (v==='CLEAR'?'空位':v==='KEEP'?'保持当前':'位置未知')
-const stamp = (t:number|undefined)=>t?new Date(t*1000).toLocaleTimeString('zh-CN',{hour12:false}):'—'
-const phases:Record<string,string>={disconnected:'设备未连接',synchronizing:'同步实际位置',observing:'观察画面',analyzing:'正在分析',switching:'镜片运动中',settling:'等待画面稳定',locked:'拍摄已锁定',error:'需要检查设备'}
-const statuses:Record<string,string>={none:'尚无运动指令',pending:'等待接收',accepted:'已接收 · 未到位',moving:'运动中 · 未到位',completed:'已验证到位',unknown:'位置未知',failed:'执行失败'}
-
-function App(){
- const [token,setToken]=useState(''),[draft,setDraft]=useState(''),[s,setS]=useState<Snapshot|null>(null),[cfg,setCfg]=useState<Config|null>(null)
- const [online,setOnline]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState(''),[text,setText]=useState(''),[busy,setBusy]=useState(false)
- const [preview,setPreview]=useState(''),[snapUrls,setSnapUrls]=useState<Record<string,string>>({})
- const [clock,setClock]=useState(Date.now()),lastSnapshotAt=useRef(Date.now())
- useEffect(()=>{const timer=setInterval(()=>setClock(Date.now()),1000);return()=>clearInterval(timer)},[])
- const upload=useRef<HTMLInputElement>(null), lastFrame=useRef(''), previewUrl=useRef(''), stateRef=useRef(s)
- stateRef.current=s
- async function api(path:string,body?:unknown){
-  const r=await fetch('/api'+path,{method:body===undefined?'GET':'POST',headers:{Authorization:'Bearer '+token,...(body===undefined?{}:{'Content-Type':'application/json'})},body:body===undefined?undefined:JSON.stringify(body)})
-  if(!r.ok){const e=await r.json().catch(()=>({detail:'请求失败'}));throw new Error(typeof e.detail==='string'?e.detail:'输入格式不正确')}
-  return r.json()
- }
- async function act(path:string,body:unknown){setBusy(true);setError('');try{const r=await api(path,body);setNotice(r.message??(r.kind==='ignored'?r.scope:'设置已更新'));return r}catch(e){setError(String((e as Error).message))}finally{setBusy(false)}}
- useEffect(()=>{if(!token)return;let dead=false,ws:WebSocket|undefined,timer:ReturnType<typeof setTimeout>;
-  async function connect(){try{const config=await api('/config');if(dead)return;setCfg(config);ws=new WebSocket(`${location.protocol==='https:'?'wss':'ws'}://${location.host}/ws/events`);ws.onopen=()=>ws?.send(JSON.stringify({type:'auth',token}));ws.onmessage=e=>{if(!dead){lastSnapshotAt.current=Date.now();setS(JSON.parse(e.data));setOnline(true)}};ws.onclose=()=>{setOnline(false);if(!dead)timer=setTimeout(connect,2000)}}catch(e){setError((e as Error).message);if(!dead)timer=setTimeout(connect,3000)}}
-  connect();return()=>{dead=true;clearTimeout(timer);ws?.close()}
- },[token])
- useEffect(()=>{if(!token)return;let dead=false;async function loop(){const f=stateRef.current?.frame;if(f&&f.frame_id!==lastFrame.current){try{const r=await fetch('/api/preview',{headers:{Authorization:'Bearer '+token}});if(r.ok&&r.status!==204){const blob=await r.blob();if(!dead){URL.revokeObjectURL(previewUrl.current);previewUrl.current=URL.createObjectURL(blob);setPreview(previewUrl.current);lastFrame.current=f.frame_id}}}catch{/* Event connection displays network failure. */}}if(!dead)timer=setTimeout(loop,250)}let timer:ReturnType<typeof setTimeout>;loop();return()=>{dead=true;clearTimeout(timer);URL.revokeObjectURL(previewUrl.current)}},[token])
- const snapKey=JSON.stringify(s?.snapshots??{})
- useEffect(()=>{let dead=false;const urls:Record<string,string>={};async function load(){for(const key of Object.keys(s?.snapshots??{})){const r=await fetch('/api/snapshots/'+key,{headers:{Authorization:'Bearer '+token}});if(r.ok)urls[key]=URL.createObjectURL(await r.blob())}if(dead)Object.values(urls).forEach(URL.revokeObjectURL);else setSnapUrls(urls)}load().catch(()=>{});return()=>{dead=true;Object.values(urls).forEach(URL.revokeObjectURL)}},[snapKey,token])
- async function imageFile(file:File){setBusy(true);setError('');try{const src=await api('/source',{kind:'upload'});const r=await fetch('/api/frames',{method:'POST',headers:{Authorization:'Bearer '+token,'Content-Type':file.type,'X-Source-Session':src.source_session_id,'X-Sequence':'0','X-Captured-At':String(Date.now()/1000)},body:file});if(!r.ok)throw new Error((await r.json()).detail);setNotice('真实图片已上传；单张图片只分析一次，不伪造连续判断。')}catch(e){setError((e as Error).message)}finally{setBusy(false)}}
- const d=s?.device, age=s?.frame?Math.max(0,s.server_time-s.frame.received_at+Math.max(0,clock-lastSnapshotAt.current)/1000):null
- function shot(key:string,frame:Frame|undefined){return <div className="shot"><div className="shot-img">{snapUrls[key]?<img src={snapUrls[key]}/>:<span><Camera size={20}/>{key==='before'?'等待下一次切换':'等待稳定后的新画面'}</span>}</div><div className="shot-caption"><b>{key==='before'?'切换前':'稳定后'} · {name(frame?.actual_filter)}</b><span>{frame?.simulated?'合成画面 · ':''}{stamp(frame?.captured_at)}</span></div></div>}
- return <div className="app">
-  <aside className="rail"><div className="brand-icon"><Aperture size={29}/></div><div className="rail-active"><ScanLine/></div><a href="#lenses" title="镜片"><Layers/></a><a href="#compare" title="前后画面"><ImagePlus/></a><a href="#details" title="联调详情"><Settings2/></a><span className="rail-bottom">AI<br/>OPTICS</span></aside>
-  <main><header><div><div className="eyebrow">INSTA360 HACKATHON / CREATIVE LAB</div><h1>光屿 <span>AI 光学创作助手</span></h1></div><div className="header-right"><span className={'connection '+(online?'live':'')}>● {online?'本地后端已连接':'等待后端连接'}</span><span className="version">工作台 / 01</span></div></header>
-  <div className="intro"><div><span className="tiny-tag">看见场景，专注创作</span><h2>让光线，多一种表达。</h2><p>观察画面、选择镜片，把注意力留给眼前。</p></div><div className="intro-mark"><Aperture size={70} strokeWidth={.7}/><span>FOCUS ON<br/>THE MOMENT.</span></div></div>
-  {!token&&<section className="access"><LockKeyhole size={20}/><div><b>连接你的本地工作台</b><p>输入 data/local-access.json 中的 control_token。凭证仅保留在当前页面内存中。</p></div><input type="password" aria-label="控制凭证" placeholder="粘贴本机控制凭证" value={draft} onChange={e=>setDraft(e.target.value)}/><button className="primary" onClick={()=>{setToken(draft);setDraft('')}} disabled={!draft}>连接</button></section>}
-  {token&&!online&&<div className="toast">后端连接尚未建立，画面可能已过期。<button onClick={()=>{setToken('');setS(null);setError('')}}>重新输入凭证</button></div>}
-  {(error||notice)&&<div role="status" className={'toast '+(error?'error':'')}>{error||notice}<button className="icon-button" onClick={()=>{setError('');setNotice('')}}><X size={16}/></button></div>}
-  <div className="workspace"><section className="view-panel"><div className="panel-top"><div className="section-label"><span className="live-dot"/>实时画面 <small>LIVE VIEW</small></div><span className="badge">{s?.source.simulated?'合成演示源':s?.source.kind==='none'||!s?'尚无输入':'真实媒体输入'}</span></div>
-   <div className="viewfinder">{preview&&s?.frame?<img src={preview} alt="最新拍摄画面"/>:<div className="empty-view"><ScanLine size={54} strokeWidth={1}/><h3>你的下一幅作品，从这里开始</h3><p>启动演示，或接入一段真实画面</p><button disabled={!online||busy} onClick={()=>act('/source',{kind:'demo'})}><Play size={15}/>启动合成演示</button></div>}<div className="view-top"><span>{s?.source.label??'等待画面输入'}</span><span>{s?.frame?`#${String(s.frame.sequence).padStart(6,'0')}`:'NO SIGNAL'}</span></div><div className="view-bottom"><span><Eye size={14}/>{name(d?.actual_filter)}{d?.simulated?' · 模拟位置':''}</span><span>{age===null?'无画面':`${age.toFixed(1)} 秒前${age>10?' · 画面已过期':''}`}</span></div><i className="corner tl"/><i className="corner tr"/><i className="corner bl"/><i className="corner br"/></div>
-   <div className="source-bar"><button disabled={!online||busy} onClick={()=>act('/source',{kind:'demo'})}><Play size={15}/>演示画面</button><button disabled={!online||busy} onClick={()=>upload.current?.click()}><ImagePlus size={15}/>上传图片</button><input ref={upload} hidden type="file" accept="image/jpeg,image/png,image/webp" onChange={e=>{if(e.target.files?.[0])imageFile(e.target.files[0]);e.target.value=''}}/><select aria-label="更多画面源" value="" disabled={!online||busy} onChange={e=>{const v=e.target.value;if(v.startsWith('video:'))act('/source',{kind:'video',media_id:v.slice(6)});else if(v.startsWith('camera:'))act('/source',{kind:'camera',camera_index:Number(v.slice(7))});else act('/source',{kind:'ace_bridge'})}}><option value="" disabled>更多画面源</option>{cfg?.camera_indices.map(i=><option key={i} value={'camera:'+i}>摄像头 {i}</option>)}{cfg?.media_files.map(id=><option key={id} value={'video:'+id}>视频 · {id}</option>)}<option value="bridge">Ace Pro 2 桥接上传</option></select><button className="source-pause" disabled={!online||!['paused','running'].includes(s?.source.status??'')} onClick={()=>act('/source/'+(s?.source.status==='paused'?'resume':'pause'),{})}>{s?.source.status==='paused'?'恢复画面':'暂停画面'}</button></div>
-   <div className="source-status"><span><Camera size={13}/>源状态：{({running:'运行中',paused:'已暂停',ended:'文件结束',disconnected:'已断开',stopped:'未启动'} as Record<string,string>)[s?.source.status??'stopped']}</span><span><Sparkles size={13}/>模型：{s?.model.simulated?'模拟分析':'未连接'}</span><span><Wifi size={13}/>设备：{d?.simulated?'模拟 ESP32':'外部桥接'}</span></div>
-  </section>
-  <section className="control-panel"><div className="panel-top"><div className="section-label">创作控制 <small>CONTROL</small></div><Settings2 size={17}/></div><div className="mode-line"><span className="mode-icon"><Radio size={22}/></span><div><h3>{d?.locked?'拍摄锁定':d?.auto?'自动创作':'自动已暂停'}</h3><p>{phases[d?.phase??'disconnected']}</p></div><button className={'toggle '+(d?.auto&&!d?.locked?'on':'')} aria-label="切换自动模式" disabled={!online||busy} onClick={()=>act('/mode',{action:d?.auto&&!d.locked?'pause':'auto'})}><i/></button></div>
-   <div className="current-lens"><span>当前实际镜片</span><h2>{name(d?.actual_filter)}<small>{d?.actual_filter??'UNKNOWN'}</small></h2><p>{d?.position_verified?(d.simulated?'模拟位置已验证 · 非真实硬件':'收到可信的位置反馈'):'未验证到位'}</p><div><span>切换目标 <b>{d?.target_filter?name(d.target_filter):'—'}</b></span><span>{statuses[d?.command_status??'none']}</span></div></div>
-   <div className="analysis"><div className="eyebrow"><Sparkles size={13}/>场景观察 <span>模拟分析预设</span></div><h3>{s?.analysis?.subject??'等待有效画面'}</h3><p>{s?.analysis?.reason??'接入画面并确认录像状态后，开始观察。模拟模型按预设返回，不识别画面内容。'}</p><div className="decision-note">{s?.automatic_block??s?.decision?.reason??'默认自动 · 安全条件满足后运行'}</div><small>最近分析 {stamp(s?.analysis_frame?.received_at)}{s?.model.latency_ms?` · ${Math.round(s.model.latency_ms)} ms`:''}</small></div>
-   <div className="recording"><label>录像状态 <span>{d?.recording_source==='unknown'?'无法自动读取':'状态来源见详情'}</span></label><select aria-label="录像状态" value={d?.recording??'unknown'} disabled={!online} onChange={e=>act('/recording',{value:e.target.value})}><option value="unknown">未知 · 自动切换受限</option><option value="stopped">我确认当前未录像（手动声明）</option><option value="recording">正在录像 · 阻止自动切换</option></select></div>
-   <div className="mode-buttons"><button disabled={!online||busy} onClick={()=>act('/mode',{action:d?.locked?'unlock':'lock'})}><LockKeyhole size={15}/>{d?.locked?'解除锁定':'拍摄锁定'}</button><button className="primary" disabled={!online||busy} onClick={()=>act('/mode',{action:'auto'})}>恢复自动<ArrowUpRight size={16}/></button></div>
-  </section></div>
-  <section className="lens-section" id="lenses"><div className="section-heading"><h3>四片镜片，四种表达 <span>THE LENS COLLECTION</span></h3><small>手动选择后锁定 · 每次只选一片</small></div><div className="lens-grid">{lenses.map(l=>{const Icon=l.icon;return <button key={l.id} style={{'--lens-color':l.color} as React.CSSProperties} className={'lens-card '+(d?.actual_filter===l.id?'selected':'')} disabled={!online||busy||d?.locked||d?.motion!=='idle'||!cfg?.slots.hasOwnProperty(l.id)||d?.connection!=='connected'} onClick={()=>act('/select',{target:l.id})}><div className="lens-art"><div className="lens-ring"><Icon size={30} strokeWidth={1.1}/></div><span>{l.id}</span>{d?.actual_filter===l.id&&<b>当前</b>}</div><div className="lens-info"><h3>{l.name}<ArrowUpRight size={16}/></h3><p>{l.desc}</p></div></button>})}</div>{cfg?.supports_clear&&<button onClick={()=>act('/select',{target:'CLEAR'})} disabled={!online||d?.locked||d?.motion!=='idle'}>移至已配置空位</button>}<p className="lens-footnote"><CircleHelp size={13}/>偏振角度由人工调整；近摄自动切换{cfg?.demo_distance_verified?'使用已配置的固定演示距离约束，不是自动测距':'尚无实测距离约束，默认保持'}。创作策略仍需实拍校准。</p></section>
-  <div className="lower-grid"><section className="card" id="compare"><div className="section-heading"><h3>这一刻，与下一刻 <span>FRAME PAIR</span></h3><span className="badge">真实缓存 · 无合成滤镜</span></div><div className="shots">{shot('before',s?.snapshots.before)}{shot('after',s?.snapshots.after)}</div><p className="muted">保存切换前与稳定后的输入画面。移动场景并非同一瞬间，不代表效果一定改善；合成演示源仍标注为合成。</p></section>
-  <section className="card intent"><div className="section-heading"><h3>说出你的创作意图</h3><span className="badge">文本测试 · 非语音识别</span></div><p className="muted">不说话也能自动工作；明确表达可以更新创作偏好。</p><form onSubmit={e=>{e.preventDefault();act('/intent',{text});setText('')}}><input aria-label="文本意图" placeholder="例如：我要星芒效果" maxLength={160} value={text} onChange={e=>setText(e.target.value)}/><button className="primary" disabled={!online||!text.trim()||busy} aria-label="提交意图"><Send size={17}/></button></form><div className="chips">{['我要星芒效果','保留倒影','我要清晰细节','保持当前镜片'].map(t=><button key={t} disabled={!online||busy} onClick={()=>act('/intent',{text:t})}>{t}</button>)}</div><div className="intent-state"><span>当前意图</span><b>{s?.intent.text||'自动 · 默认创作偏好'}</b><small>{s?.intent.scope??'偏好持续至更新；锁定持续至解锁'}</small></div></section></div>
-  <section className="card timeline"><div className="section-heading"><h3>创作动态 <span>ACTIVITY</span></h3><small>最新 8 条事件</small></div>{s?.events.length?s.events.slice(0,8).map(e=><div className="event" key={e.event_id}><time>{stamp(e.timestamp)}</time><i/><p>{e.message}</p><small>{e.type}</small></div>):<p className="muted">工作流事件将在这里出现。</p>}</section>
-  <details id="details" className="details"><summary><Settings2 size={17}/>联调详情与演示设置<ChevronDown size={16}/></summary><div className="technical"><div><label>模拟模型预设（不会识别图像）</label><select value={s?.model.scenario??'reflection'} disabled={!online} onChange={e=>act('/demo/scenario',{scenario:e.target.value})}><option value="reflection">反光遮挡 · CPL</option><option value="detail">近摄细节 · 需距离约束</option><option value="portrait">人像高光 · 黑柔</option><option value="lights">点状亮光 · 星光</option><option value="neutral">一般场景 · KEEP</option></select><p>初始阈值：每 {cfg?.sample_seconds??2} 秒采样，连续 {cfg?.consistent_count??3} 次一致，冷却 {cfg?.cooldown_seconds??8} 秒。均待实测。</p><button disabled={!online||busy} onClick={()=>act('/device/sync',{})}>查询实际位置</button><p>源会话：{s?.source.session_id??'—'}</p><p>录像状态来源：{d?.recording_source??'unknown'}</p><p>配置文件槽位为演示示例，接硬件前必须替换。ASR 与真实视觉供应商尚未配置。</p></div><pre>{JSON.stringify({device:d,frame:s?.frame,analysis:s?.analysis,slots:cfg?.slots},null,2)}</pre></div></details>
-  <footer><span><Aperture size={15}/>光屿 · 让创作回到眼前</span><span>本地优先 / 模型可替换 / 真实设备待联调</span></footer>
- </main></div>
+const steps = ['接收画面','分析场景','给出建议']
+type Show={stage:string;count:number;requestId:string|null;target:string|null;reason:string;subject:string;lens?:string}
+type Phase='wait'|'count'|'look'|'pick'
+type Demo='STAR'|'KEEP'
+const waiting:Show={stage:'waiting',count:0,requestId:null,target:null,reason:'',subject:'',lens:'waiting'}
+function Photo({src,label}:{src:string;label:string}){
+  const [failed,setFailed]=useState(false)
+  return failed?<span className="photo-missing">预览暂不可用</span>:<img src={src} alt={label} onError={()=>setFailed(true)}/>
 }
-createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>)
+function App(){
+  const [live,setLive]=useState<Show>(waiting),[online,setOnline]=useState(false)
+  const [demo,setDemo]=useState<Demo|null>(null),[run,setRun]=useState(0)
+  const [phase,setPhase]=useState<Phase>('wait'),[hot,setHot]=useState(0)
+  const started=useRef(0),requestRef=useRef<string|null>(null)
+  const demoActive=demo!==null
+  const lens=live.lens??'waiting'
+  const show:Show=demoActive?{stage:'ready',count:6,requestId:'demo-'+run,target:demo,reason:demo==='KEEP'?'这一帧没有明确的换镜依据，所以保持现在的样子。':'画面里有分开的点状亮光，建议试星光镜。',subject:'点状亮光'}:live
+  const selected=lenses.find(l=>l.id===show.target),keep=phase==='pick'&&!selected,result=phase==='pick'
+  const step=result?2:phase==='look'?1:0
+  useEffect(()=>{
+    let dead=false,timer:ReturnType<typeof setTimeout>
+    async function poll(){
+      try{
+        const response=await fetch('/api/show',{signal:AbortSignal.timeout(4500),cache:'no-store'})
+        if(!response.ok)throw new Error('unavailable')
+        const data=await response.json() as Show
+        if(!dead){setLive(data);setOnline(true)}
+      }catch{if(!dead)setOnline(false)}
+      if(!dead)timer=setTimeout(poll,1000)
+    }
+    void poll()
+    return()=>{dead=true;clearTimeout(timer)}
+  },[])
+  useEffect(()=>{
+    if(!show.requestId||show.stage==='waiting'){requestRef.current=null;setPhase('wait');return}
+    if(requestRef.current!==show.requestId){requestRef.current=show.requestId;started.current=Date.now();setPhase('count')}
+    const elapsed=Date.now()-started.current,timers:number[]=[]
+    if(elapsed<1600)timers.push(window.setTimeout(()=>setPhase('look'),1600-elapsed))
+    else setPhase(show.stage==='ready'&&elapsed>=4300?'pick':'look')
+    if(show.stage==='ready')timers.push(window.setTimeout(()=>setPhase('pick'),Math.max(0,4300-elapsed)))
+    return()=>timers.forEach(window.clearTimeout)
+  },[show.requestId,show.stage])
+  useEffect(()=>{
+    if(phase!=='look')return
+    const timer=setInterval(()=>setHot(v=>(v+1)%4),460)
+    return()=>clearInterval(timer)
+  },[phase])
+  function preview(index:number){return '/api/show/frame?request_id='+encodeURIComponent(show.requestId??'')+'&index='+index}
+  function play(target:Demo){setDemo(target);setRun(v=>v+1)}
+  const headline=phase==='wait'?<>好画面，<br/>差一点<span className="highlight">「光」。</span></>:phase==='count'?<>这一刻，<br/><span className="highlight">收到了。</span></>:phase==='look'?<>正在寻找，<br/><span className="highlight">光的搭档。</span></>:keep?<>这一刻，<br/><span className="highlight">保持就好。</span></>:<>{selected?.title.split('，')[0]}，<br/><span className="highlight">{selected?.title.split('，')[1]??selected?.name}</span></>
+  const subtitle=phase==='wait'?'等下一批照片。想先看选镜过程，点下方演示。':phase==='count'?(demoActive?'这些是演示画面，不是相机刚传来的。':'收到 '+show.count+' 张，先看第一张。'):phase==='look'?'正在从四片镜里选一片。':show.reason
+  return <main className={'shell phase-'+phase+(demoActive?' demo-on':'')}>
+    <header className="header">
+      <a className="brand" href="/" aria-label="光随 AI · LensPilot 首页"><Aperture size={29} strokeWidth={2.5}/><span>光随 AI<span className="brand-dot">.</span></span><small>LensPilot</small></a>
+      <div className="status-group">
+        <span className={'connection '+(online?'online':'')}><i/>{online?'接收端已连接':'等待接收端'}</span>
+        <span className={'connection lens '+(lens==='connected'?'online':lens==='synchronizing'?'sync':'')}><i/>{lens==='connected'?'镜片板已连接':lens==='synchronizing'?'镜片板同步中':'镜片板未连接'}</span>
+        {demoActive&&<span className="demo-badge">演示</span>}
+      </div>
+    </header>
+    <div className="progress" aria-label="当前进度"><ol>{steps.map((label,i)=><li key={label} className={i===step?'current':i<step?'done':''} aria-current={i===step?'step':undefined}><span className="step-number">{i<step?<Check size={11}/>:String(i+1).padStart(2,'0')}</span>{label}{i<steps.length-1&&<span className="step-line"/>}</li>)}</ol></div>
+    <section className="hero" aria-live="polite"><h1 key={phase+(result?show.target??'keep':'')}>{headline}</h1><p className="subtitle">{subtitle}</p></section>
+    <section className={'stage '+(phase==='wait'||phase==='count'?'gallery-stage':'')} aria-label="创作流程">
+      {(phase==='wait'||phase==='count')?<>
+        <div className="photo-fan">{Array.from({length:phase==='wait'?5:Math.min(5,show.count)},(_,i)=><article key={(show.requestId??'wait')+'-'+i} className="photo-card" style={{'--i':i,'--rotation':(i-2)*6+'deg'} as CSSProperties}><div className="photo-content">{phase==='wait'||demoActive?<div className={'graphic graphic-'+i}><span/><i/><b/>{i===2&&<Aperture size={62} strokeWidth={.8}/>}</div>:<Photo src={preview(i+1)} label={'本批第 '+(i+1)+' 张画面'}/>}</div></article>)}</div>
+        <div className="gallery-caption">{phase==='wait'?<><span className="pulse-dot"/>等待下一批照片</>:demoActive?'演示中的一批画面':<><b>{String(show.count).padStart(2,'0')}</b> 张照片已接收</>}</div>
+      </>:<>
+        <div className={'lens-board '+(result&&selected?'has-winner':'')+(keep?' keep':'')}>
+          {lenses.map((lens,i)=>{const Icon=lens.icon,chosen=result&&show.target===lens.id,mark=chosen?'本次建议':phase==='look'&&hot===i?'正在看':''
+            return <div key={lens.id} className={'lens-cell cell-'+i+(phase==='look'&&hot===i?' hot':'')+(chosen?' chosen':'')}>
+            <div className="cell-top"><span>0{i+1} / {lens.english}</span><ArrowUpRight size={19}/></div>
+            <div className="lens-disc"><div className="disc-inner"><Icon strokeWidth={1.1}/></div></div>
+            <div className="cell-bottom"><h2>{lens.name}</h2>{mark&&<span>{mark}</span>}</div>
+            {chosen&&<div className="winner-info"><span className="recommend-tag"><Check size={13}/>建议这片</span><p>{lens.hint}</p></div>}
+            {chosen&&!demoActive&&<div className="source-photo"><Photo key={show.requestId} src={preview(1)} label="本次分析的画面"/><span>看的是这张</span></div>}
+          </div>})}
+          {keep&&<div className="keep-message"><span className="keep-icon"><Pause size={29} fill="currentColor"/></span><h2>保持当前镜片</h2><p>这一帧先不换。</p></div>}
+        </div>
+      </>}
+    </section>
+    <footer>
+      <div className="demo-tools">{demoActive?<>
+        <button className={demo==='STAR'?'is-on':''} onClick={()=>play('STAR')}>星光镜</button>
+        <button className={demo==='KEEP'?'is-on':''} onClick={()=>play('KEEP')}>保持原样</button>
+        <button onClick={()=>demo&&play(demo)}><RotateCcw size={13}/>重播</button>
+        <button onClick={()=>setDemo(null)}>回到实时</button>
+      </>:<button className={phase==='wait'?'demo-start':'demo-quiet'} onClick={()=>play('STAR')}>看一遍演示 <ArrowUpRight size={14}/></button>}</div>
+    </footer>
+  </main>
+}
+createRoot(document.getElementById('root')!).render(<App/>)

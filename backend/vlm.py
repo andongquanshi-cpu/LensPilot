@@ -66,6 +66,29 @@ def normalize_scene(raw, frame_id):
     }
 
 
+def features_match(recommended, features):
+    """The suggested filter must be backed by the checked scene facts."""
+    if recommended == 'CPL':
+        return features['glass_or_water'] and features['reflection_obscures_subject']
+    if recommended == 'STAR':
+        return features['point_lights']
+    if recommended == 'BLACK_MIST':
+        return features['highlights'] and (features['portrait'] or features['soft_style'])
+    if recommended == 'CLOSE_UP':
+        return features['close_detail']
+    return recommended in ('KEEP', 'CLEAR')
+
+
+def settle_mismatch(scene):
+    scene['recommended_filter'] = 'KEEP'
+    scene['reason'] = '建议镜片和场景特征不一致，保持当前镜片。'
+    try:
+        scene['uncertainty'] = max(float(scene.get('uncertainty') or 0), 0.7)
+    except (TypeError, ValueError):
+        scene['uncertainty'] = 0.7
+    return scene
+
+
 class DashScopeVision:
     def __init__(self, settings, client=None):
         self.settings = settings
@@ -98,17 +121,30 @@ class DashScopeVision:
         owns = self.client is None
         client = self.client or httpx.Client(timeout=self.settings.model_timeout)
         try:
-            response = client.post(
-                self.settings.base_url.rstrip('/') + '/chat/completions',
-                json=body,
-                headers={'Authorization': 'Bearer ' + self.settings.api_key},
-            )
-            response.raise_for_status()
-            content = response.json()['choices'][0]['message']['content']
+            content = self._complete(client, body['messages'])
+            scene = normalize_scene(content, frame_id)
+            if features_match(scene['recommended_filter'], scene['scene_features']):
+                return scene
+            body['messages'].append({'role': 'assistant', 'content': content})
+            body['messages'].append({'role': 'user', 'content': [
+                {'type': 'text', 'text': '建议镜片和 scene_features 对不上。请重填同一份 JSON：建议 CPL 时玻璃和反光遮挡都必须为 true；建议 STAR 时点状亮光必须为 true；建议 BLACK_MIST 时必须有高光，并且有人脸或柔和风格；建议 CLOSE_UP 时近景细节必须为 true。做不到就改 recommended_filter 为 KEEP。frame_id 仍是 ' + frame_id + '。'},
+            ]})
+            scene = normalize_scene(self._complete(client, body['messages']), frame_id)
         finally:
             if owns:
                 client.close()
-        return normalize_scene(content, frame_id)
+        if features_match(scene['recommended_filter'], scene['scene_features']):
+            return scene
+        return settle_mismatch(scene)
+
+    def _complete(self, client, messages):
+        response = client.post(
+            self.settings.base_url.rstrip('/') + '/chat/completions',
+            json={'model': self.settings.model, 'temperature': 0, 'messages': messages},
+            headers={'Authorization': 'Bearer ' + self.settings.api_key},
+        )
+        response.raise_for_status()
+        return response.json()['choices'][0]['message']['content']
 
 
 def _b64(data: bytes) -> str:
